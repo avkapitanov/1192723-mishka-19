@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артем Капитанов](https://up.htmlacademy.ru/adaptive/19/user/1192723).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Горбачев](https://up.htmlacademy.ru/htmlcss/27/user/92028).
 
 ---
 
