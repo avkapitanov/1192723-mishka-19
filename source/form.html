@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Каталог товаров | HTML Academy: Мишка</title>
+  <title>Оформление заказа | HTML Academy: Мишка</title>
 </head>
 <body>
 
@@ -30,6 +30,108 @@
 </header>
 
 <main>
+
+  <h1 class="page-title">Вязание на заказ</h1>
+
+  <section class="order-block">
+    <h2 class="visually-hidden">Форма заказа</h2>
+    <form class="order-block__form order-form" action="https://echo.htmlacademy.ru">
+      <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">Тип</legend>
+        <div class="params-group__content">
+          <ul class="params-group__list">
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--radio" type="radio" name="type" value="accessories" id="type-0">
+              <label class="params-group__input-label" for="type-0">Аксессуар для интерьера</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--radio" type="radio" name="type" value="toy" id="type-1">
+              <label class="params-group__input-label" for="type-1">Детская игрушка</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">Цвет</legend>
+        <div class="params-group__content">
+          <ul class="params-group__list">
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-0" checked>
+              <label class="params-group__input-label" for="color-0">Белый</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-1" checked>
+              <label class="params-group__input-label" for="color-1">Серый</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-2">
+              <label class="params-group__input-label" for="color-2">«Тиффани»</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-3">
+              <label class="params-group__input-label" for="color-3">Черный</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-4">
+              <label class="params-group__input-label" for="color-4">Розовый</label>
+            </li>
+            <li class="params-group__item">
+              <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-5">
+              <label class="params-group__input-label" for="color-5">Оранжевый</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">ФИО</legend>
+        <div class="params-group__content">
+          <p class="params-group__item">
+            <label class="params-group__input-label params-group__input-label--person" for="person-0">Имя</label>
+            <input class="params-group__input params-group__input--text" type="text" name="person_name" placeholder="Введите ваше имя*" id="person-0">
+          </p>
+          <p class="params-group__item">
+            <label class="params-group__input-label params-group__input-label--person" for="person-1">Фамилия</label>
+            <input class="params-group__input params-group__input--text" type="text" name="person_surname" placeholder="Укажите фамилию*" id="person-1">
+          </p>
+          <p class="params-group__item">
+            <label class="params-group__input-label params-group__input-label--person" for="person-2">Отчество</label>
+            <input class="params-group__input params-group__input--text" type="text" name="person_second_name" placeholder="Отчество, если желаете" id="person-2">
+          </p>
+        </div>
+      </fieldset>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">Тел</legend>
+        <div class="params-group__content">
+          <p class="params-group__item params-group__item--phone">
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input class="params-group__input params-group__input--text" type="text" name="phone" placeholder="+7 XXX XX XX*" id="phone">
+          </p>
+        </div>
+      </fieldset>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">E-mail</legend>
+        <div class="params-group__content">
+          <p class="params-group__item params-group__item--email">
+            <label class="visually-hidden" for="email">E-mail</label>
+            <input class="params-group__input params-group__input--email" type="email" name="email" placeholder="Ваш Email*" id="email">
+          </p>
+        </div>
+      </fieldset>
+      <fieldset class="order-form__params-group params-group">
+        <legend class="params-group__title">Доп</legend>
+        <div class="params-group__content">
+          <p class="params-group__item">
+            <label class="visually-hidden" for="text">Комментарий к заказу</label>
+            <textarea class="params-group__input params-group__input--textarea" name="comment" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </p>
+        </div>
+      </fieldset>
+      <p class="order-form__comment">*Поля обязательны для заполнения</p>
+      <button class="order-form__submit" type="submit">Отправить заказ</button>
+    </form>
+  </section>
 
 </main>
 
