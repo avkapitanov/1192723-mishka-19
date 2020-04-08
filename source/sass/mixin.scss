@@ -1,0 +1,14 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font($s, $lh, $w: 400) {
+  font-size: $s;
+  line-height: $lh;
+
+  @if ($w != 400) {
+    font-weight: $w;
+  }
+}

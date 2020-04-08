@@ -1,0 +1,22 @@
+.week-product {
+  @include font(15px, 24px);
+}
+
+.week-product__section-name {
+  @include font(25px, 30px, 700);
+  color: #000000;
+}
+
+.week-product__type {
+  @include font(17px, 20px, 700);
+  color: #63d1bb;
+}
+
+.week-product__price {
+  @include font(17px, 24px, 700);
+}
+
+.week-product__buy {
+  @include font(17px, 20px, 700);
+  color: inherit;
+}

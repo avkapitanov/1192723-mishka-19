@@ -1,0 +1,11 @@
+.btn {
+  @include font(18px, 20px 700);
+  text-transform: uppercase;
+  color: #444444;
+  display: inline-block;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: 2px solid #444444;
+  width: 100%;/*Will be removed*/
+  text-align: center;
+}

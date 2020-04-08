@@ -1,0 +1,18 @@
+.product__link {
+  color: inherit;
+
+  @include font(17px, 24px, 700);
+}
+
+.product__params {
+  @include font(13px, 30px);
+}
+
+.product__actions {
+  @include font(15px, 24px, 700);
+}
+
+.product__info {
+  border: 1px solid #ededed;
+  padding: 30px 27px;
+}

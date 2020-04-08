@@ -1,0 +1,8 @@
+.copyright {
+  @include font(19px, 18px, 700);
+  color: #000000;
+  padding: 0 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

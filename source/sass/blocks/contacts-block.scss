@@ -1,0 +1,32 @@
+.contacts-block__title {
+  margin-bottom: 40px;
+}
+
+.contact-block__mail-name,
+.contact-block__address-name {
+  margin-right: 25px;
+}
+
+.contact-block__mail,
+.contact-block__address {
+  margin-bottom: 40px;
+}
+
+.contact-block__mail-value {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #62d1ba;
+}
+
+.contact-block__address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-block__address-value {
+  max-width: 140px;
+}
+
+.contacts-block__write-us {
+  margin: 39px 0;
+}
