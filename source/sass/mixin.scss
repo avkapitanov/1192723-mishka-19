@@ -4,11 +4,7 @@
   list-style: none;
 }
 
-@mixin font($s, $lh, $w: 400) {
+@mixin font($s, $lh) {
   font-size: $s;
   line-height: $lh;
-
-  @if ($w != 400) {
-    font-weight: $w;
-  }
 }

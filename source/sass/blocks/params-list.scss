@@ -1,5 +1,7 @@
-.params-list__wrapper {
-  border-bottom: 1px solid #ececec;
-  display: flex;
-  padding: 13px 0;
+.params-list {
+  .params-list__wrapper {
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    padding: 13px 0;
+  }
 }

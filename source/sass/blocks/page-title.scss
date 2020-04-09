@@ -3,5 +3,6 @@
   color: #000000;
   min-height: 76px;
 
-  @include font(27px, 30px, 700);
+  @include font(27px, 30px);
+  font-weight: 700;
 }

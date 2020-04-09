@@ -1,10 +1,10 @@
 .main-promo-block {
   background-color: #fbfbfb;
-}
 
-.main-promo-block__title {
-  @include font(27px, 30px);
-  color: #000000;
-  text-align: center;
-  width: 245px;
+  .main-promo-block__title {
+    @include font(27px, 30px);
+    color: #000000;
+    text-align: center;
+    width: 245px;
+  }
 }

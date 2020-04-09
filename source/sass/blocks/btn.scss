@@ -1,5 +1,6 @@
 .btn {
-  @include font(18px, 20px 700);
+  @include font(18px, 20px);
+  font-weight: 700;
   text-transform: uppercase;
   color: #444444;
   display: inline-block;

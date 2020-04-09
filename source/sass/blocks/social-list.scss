@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 27px;
-}
 
-.social-list__item {
-  margin-right: 40px;
+  .social-list__item {
+    margin-right: 40px;
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

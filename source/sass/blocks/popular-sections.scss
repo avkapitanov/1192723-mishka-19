@@ -1,11 +1,13 @@
-.popular-section__link {
-  @include font(19px, 24px);
-  color: #ffffff;
-  display: block;
-  min-height: 103px;
-  background-color: #63d1bb;
+.popular-section {
+  .popular-section__link {
+    @include font(19px, 24px);
+    color: #ffffff;
+    display: block;
+    min-height: 103px;
+    background-color: #63d1bb;
 
-  &:last-child {
-    background-color: #56c3b2;
+    &:last-child {
+      background-color: #56c3b2;
+    }
   }
 }

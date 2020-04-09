@@ -1,0 +1,78 @@
+.params-group {
+  padding: 0;
+
+  .params-group__list {
+    @include reset-list;
+  }
+
+  .params-group__content--group {
+    .params-group__item {
+      margin: 0;
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .params-group__input {
+      @include font(17px, 18px);
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #444444;
+      padding: 19px 0;
+
+      &::placeholder {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .params-group__title {
+    @include font(17px, 17px);
+    color: #63d1bb;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: #63d1bb;
+      width: 198px;
+    }
+  }
+
+  .params-group__title--email {
+    &::after {
+      width: 179px;
+    }
+  }
+
+  .params-group__title--phone,
+  .params-group__title--email,
+  .params-group__title--additional {
+    margin-bottom: 0;
+  }
+
+  .params-group__input-label {
+    @include font(17px, 18px);
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .params-group__input--textarea {
+    min-height: 142px;
+    border: 2px solid #444444;
+    width: 100%;
+    padding: 15px;
+    resize: none;
+
+    @include font(17px, 18px);
+  }
+}

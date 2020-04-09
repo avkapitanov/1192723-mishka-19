@@ -1,0 +1,26 @@
+.manufacture-block {
+  color: #444444;
+
+  .manufacture-block__title {
+    @include font(14px, 24px);
+    font-weight: 700;
+    border: 1px solid #ededed;
+    padding: 22px 33px;
+    margin: 0;
+  }
+
+  .manufacture-block__text {
+    @include font(13px, 24px);
+    margin: 0;
+  }
+
+  .manufacturer_block__info {
+    padding: 33px;
+    border: 1px solid #ededed;
+    border-top: none;
+  }
+
+  .manufacture-block__order {
+    margin-top: 25px;
+  }
+}

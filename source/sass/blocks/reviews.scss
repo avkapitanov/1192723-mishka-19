@@ -1,12 +1,15 @@
-.reviews__list {
-  @include reset-list;
-}
+.reviews {
+  .reviews__list {
+    @include reset-list;
+  }
 
-.reviews__content {
-  margin: 0;
-}
+  .reviews__content {
+    margin: 0;
+  }
 
-.reviews__author-name {
-  @include font(17px, 24px 700);
-  color: #000000;
+  .reviews__author-name {
+    @include font(17px, 24px);
+    font-weight: 700;
+    color: #000000;
+  }
 }
