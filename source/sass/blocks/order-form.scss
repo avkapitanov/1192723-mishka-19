@@ -1,0 +1,15 @@
+.order-form {
+  .order-form__params-group {
+    border: none;
+    margin: 30px 0;
+  }
+
+  .order-form__text {
+    @include font(13px, 24px);
+  }
+
+  .order-form__comment {
+    @include font(14px, 16px);
+    margin: 17px 0 30px;
+  }
+}

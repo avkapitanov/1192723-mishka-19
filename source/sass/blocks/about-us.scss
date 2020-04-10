@@ -1,0 +1,12 @@
+.about-us {
+  color: #000000;
+
+  .about-us__title {
+    @include font(25px, 30px);
+    font-weight: 700;
+  }
+
+  .about-us__list {
+    @include reset-list;
+  }
+}

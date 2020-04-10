@@ -1,0 +1,16 @@
+.dropdown-list {
+  .dropdown-list__item {
+    border-top: 1px solid #ececec;
+    padding: 20px 0;
+
+    &:last-child {
+      border-bottom: 1px solid #ececec;
+    }
+  }
+
+  .dropdown-list__link {
+    @include font(17px, 24px);
+    font-weight: 700;
+    color: inherit;
+  }
+}

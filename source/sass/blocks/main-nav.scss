@@ -1,0 +1,6 @@
+.main-nav {
+  .main-nav__list {
+    @include reset-list;
+    color: #000000;
+  }
+}
