@@ -5,8 +5,8 @@
     @include reset-list;
   }
 
-  .params-group__content--group {
-    .params-group__item {
+  .params-group__item {
+    &--text {
       margin: 0;
       margin-bottom: 23px;
 
@@ -15,7 +15,15 @@
       }
     }
 
-    .params-group__input {
+    &--phone,
+    &--email {
+      margin: 0;
+    }
+  }
+
+  .params-group__input {
+    &--text,
+    &--email {
       @include font(17px, 18px);
       width: 100%;
       border: none;
@@ -25,6 +33,16 @@
       &::placeholder {
         opacity: 0.3;
       }
+    }
+
+    &--textarea {
+      min-height: 142px;
+      border: 2px solid #444444;
+      width: 100%;
+      padding: 15px;
+      resize: none;
+
+      @include font(17px, 18px);
     }
   }
 
@@ -46,33 +64,23 @@
       background-color: #63d1bb;
       width: 198px;
     }
-  }
 
-  .params-group__title--email {
-    &::after {
-      width: 179px;
+    &--email {
+      &::after {
+        width: 179px;
+      }
     }
-  }
 
-  .params-group__title--phone,
-  .params-group__title--email,
-  .params-group__title--additional {
-    margin-bottom: 0;
+    &--phone,
+    &--email,
+    &--additional {
+      margin-bottom: 0;
+    }
   }
 
   .params-group__input-label {
     @include font(17px, 18px);
     font-weight: 700;
     color: #000000;
-  }
-
-  .params-group__input--textarea {
-    min-height: 142px;
-    border: 2px solid #444444;
-    width: 100%;
-    padding: 15px;
-    resize: none;
-
-    @include font(17px, 18px);
   }
 }
