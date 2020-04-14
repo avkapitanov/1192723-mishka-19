@@ -10,3 +10,12 @@
     @include reset-list;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    &__title,
+    &__list {
+     padding: 0 225px;
+    }
+  }
+}

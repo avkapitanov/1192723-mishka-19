@@ -22,11 +22,13 @@
         <li class="dropdown-list__item">
           <a class="dropdown-list__link" href="form.html">Вязание на заказ</a>
         </li>
-        <li class="dropdown-list__item">
-          <a class="dropdown-list__link" href="#">Поиск по сайту</a>
+      </ul>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link" href="#">Поиск по сайту</a>
         </li>
-        <li class="dropdown-list__item">
-          <a class="dropdown-list__link dropdown-list__link--basket-empty" href="#">Корзина: пока пуста</a>
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--basket-empty" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -42,52 +44,62 @@
 
     <section class="popular-sections">
       <h2 class="visually-hidden">Популярные категории товаров</h2>
-      <a class="popular-section__link" href="catalog-interior.html">
-        Предметы интерьера
-        <img class="popular-section__image" src="img/icon-interior.svg" width="40" height="63" alt="Предметы интерьера">
-      </a>
-      <a class="popular-section__link" href="catalog-toys.html">
-        Детские игрушки
-        <img class="popular-section__image" src="img/icon-toy.svg" width="60" height="60" alt="Детские игрушки">
-      </a>
+      <div class="popular-sections__links">
+        <a class="popular-sections__link" href="catalog-interior.html">
+          Предметы интерьера
+          <img class="popular-sections__image" src="img/icon-interior.svg" width="40" height="63" alt="Предметы интерьера">
+        </a>
+        <a class="popular-sections__link" href="catalog-toys.html">
+          Детские игрушки
+          <img class="popular-sections__image" src="img/icon-toy.svg" width="60" height="60" alt="Детские игрушки">
+        </a>
+      </div>
     </section>
 
     <section class="week-product">
-      <h2 class="week-product__section-name">Вязанные корзинки</h2>
-      <span class="week-product__type">Товар недели</span>
-      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <dl class="week-product__params params-list">
-        <div class="params-list__wrapper">
-          <dt class="params-list__name">
-            Цвет:
-          </dt>
-          <dd class="params-list__value">
-            «Тиффани»/серый
-          </dd>
+      <div class="week-product__header">
+        <h2 class="week-product__section-name">Вязанные корзинки</h2>
+        <span class="week-product__type">Товар недели</span>
+      </div>
+      <div class="week-product__info">
+        <div class="week-product__description">
+          <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+            размерах.</p>
+          <dl class="week-product__params params-list">
+            <div class="params-list__wrapper">
+              <dt class="params-list__name">
+                Цвет:
+              </dt>
+              <dd class="params-list__value">
+                «Тиффани»/серый
+              </dd>
+            </div>
+            <div class="params-list__wrapper">
+              <dt class="params-list__name">
+                Диаметр:
+              </dt>
+              <dd class="params-list__value">
+                25 см
+              </dd>
+            </div>
+            <div class="params-list__wrapper">
+              <dt class="params-list__name">
+                Высота:
+              </dt>
+              <dd class="params-list__value">
+                15 см
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="params-list__wrapper">
-          <dt class="params-list__name">
-            Диаметр:
-          </dt>
-          <dd class="params-list__value">
-            25 см
-          </dd>
+        <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <div class="week-product__buy">
+          <p class="week-product__price">
+            Цена: 990 руб.
+          </p>
+          <a class="week-product__buy-btn btn" href="#">Заказать</a>
         </div>
-        <div class="params-list__wrapper">
-          <dt class="params-list__name">
-            Высота:
-          </dt>
-          <dd class="params-list__value">
-            15 см
-          </dd>
-        </div>
-      </dl>
-      <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-      <p class="week-product__price">
-        Цена: 990 руб.
-      </p>
-      <a class="week-product__buy btn" href="#">Заказать</a>
+      </div>
     </section>
 
     <section class="about-us">
@@ -174,14 +186,16 @@
 
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <div class="contacts__mail">
-        <span class="contacts__mail-name">e-mail:</span>
-        <span class="contacts__mail-value">info@mimimishkashop.ru</span>
-      </div>
-      <div class="contacts__address">
-        <span class="contacts__address-name">адрес:</span>
-        <address class="contacts__address-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-        </address>
+      <div class="contacts__info">
+        <div class="contacts__mail">
+          <span class="contacts__mail-name">e-mail:</span>
+          <span class="contacts__mail-value">info@mimimishkashop.ru</span>
+        </div>
+        <div class="contacts__address">
+          <span class="contacts__address-name">адрес:</span>
+          <address class="contacts__address-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+          </address>
+        </div>
       </div>
       <div class="contacts__map"></div>
       <a class="contacts__write-us btn" href="write-us.html">Напишите нам</a>

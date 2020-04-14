@@ -13,3 +13,29 @@
     color: #000000;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    position: relative;
+
+    .reviews__title {
+      @include font(43px, 50px);
+    }
+
+    .reviews__text {
+      @include font(17px, 30px);
+    }
+
+    .reviews__write {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .reviews__navigation {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

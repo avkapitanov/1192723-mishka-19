@@ -1,6 +1,13 @@
 .contacts {
+  text-align: center;
+
   .contacts__title {
     margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .contacts__info {
+    text-align: left;
   }
 
   .contacts__mail-name,
@@ -30,5 +37,32 @@
 
   .contacts__write-us {
     margin: 39px 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    .contacts__map {
+      min-height: 457px;
+      background-color: red;
+    }
+
+    .contacts__info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .contacts__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &::after {
+        content: "";
+        width: 47px;
+        height: 81px;
+        background-image: url("../../img/icon-flag.svg");
+      }
+    }
   }
 }

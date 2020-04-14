@@ -24,3 +24,51 @@
     color: inherit;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .week-product {
+    .week-product__section-name {
+      @include font(43px, 50px);
+    }
+    .week-product__type {
+      @include font(17px, 17px);
+      width: 98px;
+      text-align: center;
+    }
+    .week-product__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .week-product__info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .week-product__description,
+    .week-product__buy {
+      width: 334px;
+    }
+    .week-product__buy {
+      margin-top: -90px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .week-product {
+    .week-product__header {
+      justify-content: flex-start;
+    }
+
+    .week-product__section-name {
+      @include font(53px, 57px);
+      order: 2;
+    }
+
+    .week-product__type {
+      width: 175px;
+      order: 1;
+    }
+  }
+}

@@ -1,5 +1,5 @@
-.popular-section {
-  .popular-section__link {
+.popular-sections {
+  .popular-sections__link {
     @include font(19px, 24px);
     color: #ffffff;
     display: block;
@@ -9,5 +9,17 @@
     &:last-child {
       background-color: #56c3b2;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .popular-sections__links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .popular-sections__link {
+    @include font(20px, 30px);
+    font-weight: 700;
+    flex-grow: 1;
   }
 }
