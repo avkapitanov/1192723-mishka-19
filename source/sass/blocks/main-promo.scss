@@ -1,10 +1,12 @@
 .main-promo {
   background-color: #fbfbfb;
+  padding-top: 160px;
 
   .main-promo__title {
     @include font(27px, 30px);
     color: #000000;
     text-align: center;
     width: 245px;
+    margin: 0;
   }
 }
