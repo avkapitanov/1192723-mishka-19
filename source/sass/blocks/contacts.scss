@@ -38,15 +38,15 @@
   .contacts__write-us {
     margin: 39px 0;
   }
+
+  .contacts__map {
+    min-height: 457px;
+    background-color: red;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    .contacts__map {
-      min-height: 457px;
-      background-color: red;
-    }
-
     .contacts__info {
       display: flex;
       justify-content: space-between;

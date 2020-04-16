@@ -16,10 +16,24 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    position: relative;
+    .reviews__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .reviews__author-name,
+    .reviews__author-contact {
+      display: block;
+    }
 
     .reviews__title {
       @include font(43px, 50px);
+      order: 1;
+    }
+
+    .reviews__list {
+      order: 3;
     }
 
     .reviews__text {
@@ -27,15 +41,24 @@
     }
 
     .reviews__write {
-      position: absolute;
-      top: 0;
-      right: 0;
+      align-self: center;
+      order: 2;
+    }
+
+    .reviews__author-info {
+      order: 4;
     }
 
     .reviews__navigation {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      order: 5;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    .reviews__inner {
+      padding-left: 175px;
     }
   }
 }

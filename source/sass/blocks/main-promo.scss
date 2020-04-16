@@ -1,12 +1,32 @@
 .main-promo {
   background-color: #fbfbfb;
-  padding-top: 160px;
+  padding-top: 75px;
 
   .main-promo__title {
     @include font(27px, 30px);
     color: #000000;
     text-align: center;
     width: 245px;
-    margin: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-promo {
+    padding-top: 160px;
+
+    .main-promo__title {
+      @include font(43px, 50px);
+      width: 500px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-promo {
+    .main-promo__title {
+      @include font(53px, 57px);
+      width: 620px;
+    }
   }
 }
