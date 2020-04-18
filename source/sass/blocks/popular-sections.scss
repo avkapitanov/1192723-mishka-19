@@ -1,4 +1,6 @@
 .popular-sections {
+  background-color: $bg-grey;
+
   .popular-sections__link {
     @include font(19px, 24px);
     color: #ffffff;
