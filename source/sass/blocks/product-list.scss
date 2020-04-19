@@ -3,3 +3,11 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

@@ -10,3 +10,23 @@
     @include reset-list;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    .about-us__title {
+      @include font(43px, 50px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    .about-us__inner {
+      padding: 0 225px;
+    }
+
+    .about-us__title {
+      @include font(53px, 57px);
+    }
+  }
+}

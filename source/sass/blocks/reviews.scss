@@ -13,3 +13,58 @@
     color: #000000;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    .reviews__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-image: url("../../img/review@1x.jpg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding-top: 80px;
+      padding-bottom: 52px;
+    }
+
+    .reviews__author-name,
+    .reviews__author-contact {
+      display: block;
+    }
+
+    .reviews__title {
+      @include font(43px, 50px);
+      order: 1;
+    }
+
+    .reviews__list {
+      order: 3;
+    }
+
+    .reviews__text {
+      @include font(17px, 30px);
+    }
+
+    .reviews__write {
+      align-self: center;
+      order: 2;
+    }
+
+    .reviews__author-info {
+      order: 4;
+    }
+
+    .reviews__navigation {
+      order: 5;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    .reviews__container {
+      padding-left: 225px;
+      background-position-x: 50px;
+    }
+  }
+}

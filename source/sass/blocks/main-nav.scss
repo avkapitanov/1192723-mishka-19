@@ -4,3 +4,9 @@
     color: #000000;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: flex;
+  }
+}

@@ -29,3 +29,56 @@
     display: block;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .product {
+    display: flex;
+
+    .product__image-wrapper {
+      width: 50%;
+      background-color: $bg-grey;/*temp*/
+      min-height: 334px;/*temp*/
+    }
+
+    .product__info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .product__name,
+    .product__params {
+      margin: 0;
+    }
+
+    .product__actions {
+      margin-top: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 315px;
+
+    .product__inner {
+      display: flex;
+    }
+
+    .product__image-wrapper {
+      width: 100%;
+      background-color: $bg-grey;/*temp*/
+      display: block;
+      min-height: 462px;
+    }
+
+
+    .product__info {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+}

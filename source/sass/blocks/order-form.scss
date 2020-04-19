@@ -13,3 +13,30 @@
     margin: 17px 0 30px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .order-form {
+    .order-form__text {
+      @include font(17px, 30px);
+    }
+
+    .order-form__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .order-form__comment {
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-form {
+    .order-form__bottom {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
+  }
+}

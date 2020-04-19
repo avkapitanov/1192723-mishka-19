@@ -7,3 +7,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0;
+  }
+}

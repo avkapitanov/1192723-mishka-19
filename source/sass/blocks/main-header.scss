@@ -1,3 +1,120 @@
 .main-header {
   background-color: #ffffff;
+  height: 78px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  .main-header__toggle {
+    width: 20px;
+    height: 14px;
+    border: none;
+    order: 2;
+  }
+
+  .main-header__nav,
+  .main-header__user-block,
+  .main-header__delivery {
+    display: none;
+  }
+
+  .main-header__logo-img {
+    display: block;
+  }
+
+  .main-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .main-header__logo-wrapper {
+    order: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    height: 88px;
+    border-top: none;
+
+    .main-header__toggle {
+      display: none;
+    }
+
+    .main-header__logo-wrapper {
+      width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .main-header__user-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      order: 2;
+      height: 100%;
+    }
+
+    .main-header__search-link,
+    .main-header__basket-link {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #ececec;
+    }
+
+    .main-header__basket-link {
+      @include font(17px, 24px);
+      font-weight: 700;
+      color: #000000;
+      padding-left: 31px;
+    }
+
+    .main-header__basket-text {
+      padding-left: 31px;
+    }
+
+    .main-header__search-link {
+      width: 82px;
+    }
+
+    .main-header__container {
+      align-items: stretch;
+    }
+
+    .main-header__delivery {
+      display: block;
+      order: 4;
+      margin: 24px 0;
+    }
+
+    .main-header__nav {
+      display: block;
+      width: 50%;
+      order: 3;
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    .main-header__nav {
+      width: 375px;
+      order: 1;
+    }
+
+    .main-header__logo-wrapper {
+      width: 150px;
+    }
+
+    .main-header__delivery {
+      margin-left: auto;
+    }
+  }
 }
