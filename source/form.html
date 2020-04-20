@@ -27,7 +27,7 @@
         </li>
       </ul>
     </nav>
-    <a class="main-header__logo-wrapper">
+    <a class="main-header__logo-wrapper" href="index.html">
       <img class="main-header__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
     </a>
     <div class="main-header__user-block">
@@ -49,15 +49,19 @@
 </header>
 
 <main>
-  <div class="container">
-    <h1 class="page-title">Вязание на заказ</h1>
+  <section class="main-promo">
+    <div class="main-promo__container container">
+      <h1 class="main-promo__title">Вязание на заказ</h1>
+    </div>
+  </section>
 
-    <section class="order-block">
-      <h2 class="visually-hidden">Форма заказа</h2>
-      <form class="order-block__form order-form" action="https://echo.htmlacademy.ru">
-        <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
-          свяжемся с вами, чтобы уточнить детали.</p>
-        <div class="order-form__params-group params-group" aria-labelledby="group-type">
+  <section class="order-block">
+    <h2 class="visually-hidden">Форма заказа</h2>
+    <form class="order-block__form order-form" action="https://echo.htmlacademy.ru">
+      <p class="order-form__text container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
+      <div class="order-form__params-group params-group" aria-labelledby="group-type">
+        <div class="params-group__container container">
           <div id="group-type" class="params-group__title">Тип</div>
           <div class="params-group__content">
             <ul class="params-group__list">
@@ -72,7 +76,9 @@
             </ul>
           </div>
         </div>
-        <div class="order-form__params-group params-group" aria-labelledby="group-color">
+      </div>
+      <div class="order-form__params-group params-group" aria-labelledby="group-color">
+        <div class="params-group__container container">
           <div id="group-color" class="params-group__title">Цвет</div>
           <div class="params-group__content params-group__content--colors">
             <ul class="params-group__list params-group__list--colors">
@@ -103,7 +109,9 @@
             </ul>
           </div>
         </div>
-        <div class="order-form__params-group params-group" aria-labelledby="group-name">
+      </div>
+      <div class="order-form__params-group params-group" aria-labelledby="group-name">
+        <div class="params-group__container container">
           <div id="group-name" class="params-group__title">ФИО</div>
           <div class="params-group__content">
             <p class="params-group__item params-group__item--text">
@@ -120,7 +128,9 @@
             </p>
           </div>
         </div>
-        <div class="order-form__params-group params-group" aria-labelledby="group-phone">
+      </div>
+      <div class="order-form__params-group params-group" aria-labelledby="group-phone">
+        <div class="params-group__container container">
           <div id="group-phone" class="params-group__title params-group__title--phone">Тел</div>
           <div class="params-group__content">
             <p class="params-group__item params-group__item--phone">
@@ -129,7 +139,9 @@
             </p>
           </div>
         </div>
-        <div class="order-form__params-group params-group" aria-labelledby="group-email">
+      </div>
+      <div class="order-form__params-group params-group" aria-labelledby="group-email">
+        <div class="params-group__container container">
           <div id="group-email" class="params-group__title params-group__title--email">E-mail</div>
           <div class="params-group__content">
             <p class="params-group__item ">
@@ -138,7 +150,9 @@
             </p>
           </div>
         </div>
-        <div class="order-form__params-group params-group" aria-labelledby="group-text">
+      </div>
+      <div class="order-form__params-group params-group" aria-labelledby="group-text">
+        <div class="params-group__container container">
           <div id="group-text" class="params-group__title params-group__title--additional">Доп</div>
           <div class="params-group__content">
             <p class="params-group__item params-group__item--textarea">
@@ -147,13 +161,13 @@
             </p>
           </div>
         </div>
-        <div class="order-form__bottom">
-          <p class="order-form__comment">*Поля обязательны для заполнения</p>
-          <button class="order-form__submit btn" type="submit">Отправить заказ</button>
-        </div>
-      </form>
-    </section>
-  </div>
+      </div>
+      <div class="order-form__bottom container">
+        <p class="order-form__comment">*Поля обязательны для заполнения</p>
+        <button class="order-form__submit btn" type="submit">Отправить заказ</button>
+      </div>
+    </form>
+  </section>
 </main>
 
 <footer class="main-footer">

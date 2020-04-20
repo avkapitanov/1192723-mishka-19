@@ -87,8 +87,10 @@
 
 @media (min-width: $tablet-width) {
   .params-group {
-    display: flex;
-    align-items: flex-start;
+    .params-group__container {
+      display: flex;
+      align-items: flex-start;
+    }
 
     &:nth-child(1) {
       background-color: #f1f1f1;
@@ -142,6 +144,7 @@
   .params-group {
     .params-group__title {
       width: 175px;
+      padding-left: 60px;
     }
 
     .params-group__item {

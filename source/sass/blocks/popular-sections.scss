@@ -12,17 +12,40 @@
       background-color: #56c3b2;
     }
   }
+
+  .popular-sections__link-inner {
+    width: $mobile-width;
+    padding: 0 $mobile-container-padding;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .popular-sections__links {
-    display: flex;
-    justify-content: space-between;
-  }
+  .popular-sections {
+    .popular-sections__links {
+      width: $tablet-width;
+      padding: 0 $tablet-container-padding;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .popular-sections__link {
-    @include font(20px, 30px);
-    font-weight: 700;
-    flex-grow: 1;
+    .popular-sections__link {
+      @include font(20px, 30px);
+      font-weight: 700;
+      flex-grow: 1;
+    }
+
+    .popular-sections__link-inner {
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popular-sections {
+    .popular-sections__links {
+      width: $desktop-width;
+    }
   }
 }
