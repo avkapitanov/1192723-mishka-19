@@ -26,7 +26,7 @@
     }
 
     .dropdown-list__link {
-      padding: 20px 0;
+      padding: 17px 0;
       font-weight: 700;
       color: inherit;
     }
@@ -43,7 +43,11 @@
       padding: 31px 0;
 
       &--out {
-        padding: 20px 0;
+        padding: 18px 0;
+      }
+
+      &--sale {
+        padding-left: 32px;
       }
     }
 

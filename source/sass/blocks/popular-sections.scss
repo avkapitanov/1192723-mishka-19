@@ -4,7 +4,7 @@
   .popular-sections__link {
     @include font(19px, 24px);
     color: #ffffff;
-    display: block;
+    display: flex;
     min-height: 103px;
     background-color: #63d1bb;
 
@@ -13,10 +13,19 @@
     }
   }
 
+  .popular-sections__name {
+    width: 50%;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
   .popular-sections__link-inner {
     width: $mobile-width;
     padding: 0 $mobile-container-padding;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -34,10 +43,18 @@
       @include font(20px, 30px);
       font-weight: 700;
       flex-grow: 1;
+      width: 50%;
+      min-height: 127px;
     }
 
     .popular-sections__link-inner {
-      width: auto;
+      width: 100%;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    .popular-sections__name {
+      margin-top: -5px;
     }
   }
 }
@@ -46,6 +63,10 @@
   .popular-sections {
     .popular-sections__links {
       width: $desktop-width;
+    }
+
+    .popular-sections__name {
+      width: 185px;
     }
   }
 }

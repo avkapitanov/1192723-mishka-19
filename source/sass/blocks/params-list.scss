@@ -1,7 +1,31 @@
 .params-list {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 28px;
+
   .params-list__wrapper {
     border-bottom: 1px solid #ececec;
     display: flex;
     padding: 13px 0;
+  }
+
+  .params-list__row {
+    @include font(15px, 20px);
+    border-bottom: 1px solid #ececec;
+
+    .params-list__name--first,
+    .params-list__value--first {
+      padding-top: 3px;
+    }
+  }
+
+  .params-list__name,
+  .params-list__value {
+    padding-bottom: 10px;
+    padding-top: 9px;
+  }
+
+  .params-list__name {
+    width: 97px;
   }
 }

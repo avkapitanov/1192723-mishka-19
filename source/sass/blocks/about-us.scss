@@ -4,6 +4,7 @@
   .about-us__title {
     @include font(25px, 30px);
     font-weight: 700;
+    margin: 0 0 32px;
   }
 
   .about-us__list {
@@ -15,6 +16,8 @@
   .about-us {
     .about-us__title {
       @include font(43px, 50px);
+      margin-left: -5px;
+      margin-bottom: 49px;
     }
   }
 }
