@@ -1,26 +1,55 @@
 .week-product {
   @include font(15px, 24px);
+  padding-bottom: 42px;
+  position: relative;
+  margin-bottom: 27px;
+
+
+  &::after {
+    content: "";
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    height: 6px;
+    background-repeat: repeat-x;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .week-product__header {
+    margin-bottom: 20px;
+  }
 
   .week-product__section-name {
     @include font(25px, 30px);
     font-weight: 700;
     color: #000000;
+    margin-top: 27px;
+    margin-bottom: 4px;
   }
 
   .week-product__type {
     @include font(17px, 20px);
     font-weight: 700;
     color: #63d1bb;
+    text-transform: uppercase;
   }
 
   .week-product__info {
-    padding-bottom: 110px;
+    padding-bottom: 120px;
     position: relative;
+  }
+
+  .week-product__text {
+    margin: 0;
+    margin-bottom: 25px;
   }
 
   .week-product__price {
     @include font(17px, 24px);
     font-weight: 700;
+    margin: 0 0 26px;
   }
 
   .week-product__buy {
@@ -31,25 +60,57 @@
     bottom: 0;
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .week-product__buy-btn {
+    padding-bottom: 14px;
+    padding-top: 14px;
+    width: 100%;
   }
 }
 
 @media (min-width: $tablet-width) {
   .week-product {
+    padding-bottom: 70px;
+    margin-bottom: 48px;
+
+    &::after {
+      height: 17px;
+    }
+
     .week-product__section-name {
       @include font(43px, 50px);
+      margin-left: -3px;
     }
 
     .week-product__type {
       @include font(17px, 17px);
       width: 98px;
       text-align: center;
+      margin-bottom: 9px;
+      margin-right: 14px;
+    }
+
+    .week-product__text {
+      @include font(17px, 30px);
+      max-width: 295px;
+      margin-bottom: 42px;
+    }
+
+    .week-product__image {
+      width: 333px;
+      height: 404px;
+      margin-top: 8px;
     }
 
     .week-product__header {
+      margin-bottom: 45px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
     }
 
     .week-product__info {
@@ -59,35 +120,80 @@
       padding-bottom: 0;
     }
 
-    .week-product__description,
-    .week-product__buy {
+    .week-product__description {
       width: 334px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .week-product__buy {
+      width: 290px;
       position: static;
+      margin-top: auto;
+      margin-left: -1px;
+    }
+
+    .week-product__price {
+      @include font(20px, 24px);
+      margin: 0 0 34px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .week-product {
+    padding-bottom: 98px;
+    margin-bottom: 58px;
+
+    &::after {
+      height: 23px;
+    }
+
+    .week-product__container {
+      padding-top: 79px;
+    }
+
     .week-product__header {
       justify-content: flex-start;
+      margin-bottom: 45px;
     }
 
     .week-product__section-name {
       @include font(53px, 57px);
       order: 2;
+      z-index: 2;
+      margin-bottom: 0;
     }
 
     .week-product__type {
       width: 175px;
       order: 1;
+      margin-right: 0;
+      padding: 0 30px 0 20px;
     }
 
     .week-product__info {
       padding-left: 175px;
+      padding-top: 3px;
+    }
+
+    .week-product__image {
+      width: 525px;
+      height: 636px;
+      margin-top: -158px;
+    }
+
+    .week-product__buy {
+      margin-left: 0;
+    }
+
+    .week-product__description {
+      width: auto;
+    }
+
+    .week-product__text {
+      margin-bottom: 53px;
     }
   }
 }

@@ -1,6 +1,5 @@
 .dropdown-list {
   .dropdown-list__item {
-    border-top: 1px solid #ececec;
     display: none;
 
     &:nth-child(-n+2) {
@@ -12,6 +11,19 @@
     font-weight: 700;
     color: inherit;
     display: block;
+  }
+
+  &--opened,
+  &--nojs {
+    .dropdown-list__item {
+      border-bottom: 1px solid #ececec;
+      padding-left: $mobile-container-padding + 46px;
+    }
+
+    .dropdown-list__link {
+      @include font(17px, 24px);
+      padding: 31px 0;
+    }
   }
 }
 
@@ -26,7 +38,7 @@
     }
 
     .dropdown-list__link {
-      padding: 20px 0;
+      padding: 17px 0;
       font-weight: 700;
       color: inherit;
     }
@@ -40,10 +52,14 @@
     flex-wrap: wrap;
 
     .dropdown-list__link {
-      padding: 31px 0;
+      padding: 32px 0;
 
       &--out {
-        padding: 20px 0;
+        padding: 18px 0;
+      }
+
+      &--sale {
+        padding-left: 32px;
       }
     }
 

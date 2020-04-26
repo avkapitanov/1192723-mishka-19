@@ -1,7 +1,47 @@
 .advantages-list {
+  display: flex;
+  flex-direction: column;
+
   .advantages-list__item {
     @include font(17px, 20px);
     font-weight: 700;
+    margin-bottom: 35px;
+
+    &--handed {
+      order: 4;
+    }
+
+    &--fatherland {
+      order: 5;
+    }
+
+    &--gift {
+      order: 6;
+    }
+
+    &:first-child {
+      margin-bottom: 29px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 32px;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advantages-list__item-text {
+    margin-top: 15px;
+
+    &--style {
+      margin-top: 22px;
+    }
+
+    &--fatherland {
+      margin-top: 23px;
+    }
   }
 }
 
@@ -9,9 +49,52 @@
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    //max-height: 465px;
 
-    &__item {
+    .advantages-list__item {
       width: 50%;
+
+      @include font(20px, 22px);
+      margin-bottom: 63px;
+
+      &--handed {
+        order: 2;
+      }
+
+      &--nordic {
+        order: 3;
+      }
+
+      &--like {
+        order: 5;
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 55px;
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 63px;
+      }
+
+      &:nth-child(5) {
+        margin-bottom: 58px;
+      }
+
+      &:nth-child(3n) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages-list {
+    .advantages-list__item-text {
+      &--ecology {
+        margin-top: 13px;
+      }
     }
   }
 }

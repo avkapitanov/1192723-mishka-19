@@ -1,19 +1,27 @@
 .main-header {
   background-color: #ffffff;
-  height: 78px;
+  height: 80px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 
   .main-header__toggle {
-    width: 20px;
-    height: 14px;
+    width: 22px;
+    height: 22px;
     border: none;
-    order: 2;
+    position: absolute;
+    top: 27px;
+    right: $mobile-container-padding;
+    background: none;
+    background-image: url("../img/icon-menu-open.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background 0.2s linear;
   }
 
   .main-header__nav,
   .main-header__user-block,
-  .main-header__delivery {
+  .main-header__delivery,
+  .main-header__search-text {
     display: none;
   }
 
@@ -22,33 +30,118 @@
   }
 
   .main-header__container {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     flex-wrap: wrap;
   }
 
-  .main-header__logo-wrapper {
-    order: 1;
+  &--opened,
+  &--nojs {
+    height: auto;
+    min-height: 80px;
+
+    .main-header__container {
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+    }
+
+    .main-header__logo-wrapper {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .main-header__nav,
+    .main-header__user-block {
+      display: block;
+      background: #ffffff;
+      width: 100%;
+    }
+
+    .main-header__search-icon,
+    .main-header__basket-icon {
+      position: absolute;
+      left: $mobile-container-padding;
+    }
+
+    .main-header__search-text,
+    .main-header__basket-text {
+      display: block;
+      margin-right: $mobile-container-padding;
+
+      @include font(17px, 24px);
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .main-header__toggle {
+      background-image: url("../img/icon-menu-close.svg");
+    }
+
+    .main-header__user-block-link {
+      display: block;
+      position: relative;
+      padding: 32px 0;
+      padding-left: $mobile-container-padding + 46px;
+      border-bottom: 1px solid #ececec;
+    }
+  }
+
+  &--nojs {
+    .main-header__toggle {
+      display: none;
+    }
+
+    .main-header__container {
+      padding: 0;
+      position: static;
+      transform: none;
+    }
+
+    .main-header__nav {
+      border-top: 1px solid #ececec;
+    }
+
+    .main-header__user-block-link {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .main-header {
-    height: 88px;
+    height: 89px;
     border-top: none;
+
+    .main-header__container {
+      justify-content: space-between;
+      align-items: stretch;
+    }
 
     .main-header__toggle {
       display: none;
     }
 
     .main-header__logo-wrapper {
-      width: 320px;
+      width: 115px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       height: 100%;
+    }
+
+    .main-header__logo-img {
+      width: 113px;
+      height: 46px;
     }
 
     .main-header__user-block {
@@ -72,7 +165,7 @@
       @include font(17px, 24px);
       font-weight: 700;
       color: #000000;
-      padding-left: 31px;
+      padding-left: 32px;
     }
 
     .main-header__basket-text {
@@ -80,17 +173,14 @@
     }
 
     .main-header__search-link {
-      width: 82px;
-    }
-
-    .main-header__container {
-      align-items: stretch;
+      width: 83px;
     }
 
     .main-header__delivery {
       display: block;
       order: 4;
-      margin: 24px 0;
+      margin: 20px 0;
+      z-index: 2;
     }
 
     .main-header__nav {
@@ -98,6 +188,7 @@
       width: 50%;
       order: 3;
       height: 100%;
+      z-index: 2;
     }
   }
 }
@@ -105,16 +196,26 @@
 @media (min-width: $desktop-width) {
   .main-header {
     .main-header__nav {
-      width: 375px;
+      width: 374px;
       order: 1;
     }
 
     .main-header__logo-wrapper {
       width: 150px;
+      order: 2;
+    }
+
+    .main-header__logo-img {
+      width: 149px;
+      height: 172px;
     }
 
     .main-header__delivery {
       margin-left: auto;
+    }
+
+    .main-header__basket-text {
+      padding-right: 2px;
     }
   }
 }
