@@ -5,29 +5,23 @@
   border-bottom: 1px solid #ececec;
 
   .main-header__toggle {
-    width: 20px;
-    height: 14px;
+    width: 22px;
+    height: 22px;
     border: none;
     position: absolute;
+    top: 27px;
     right: $mobile-container-padding;
     background: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 2px;
-      background-color: #000000;
-
-      box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
-    }
+    background-image: url("../img/icon-menu-open.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background 0.2s linear;
   }
 
   .main-header__nav,
   .main-header__user-block,
-  .main-header__delivery {
+  .main-header__delivery,
+  .main-header__search-text {
     display: none;
   }
 
@@ -42,6 +36,84 @@
     justify-content: center;
     height: 100%;
     flex-wrap: wrap;
+  }
+
+  &--opened,
+  &--nojs {
+    height: auto;
+    min-height: 80px;
+
+    .main-header__container {
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+    }
+
+    .main-header__logo-wrapper {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .main-header__nav,
+    .main-header__user-block {
+      display: block;
+      background: #ffffff;
+      width: 100%;
+    }
+
+    .main-header__search-icon,
+    .main-header__basket-icon {
+      position: absolute;
+      left: $mobile-container-padding;
+    }
+
+    .main-header__search-text,
+    .main-header__basket-text {
+      display: block;
+      margin-right: $mobile-container-padding;
+
+      @include font(17px, 24px);
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .main-header__toggle {
+      background-image: url("../img/icon-menu-close.svg");
+    }
+
+    .main-header__user-block-link {
+      display: block;
+      position: relative;
+      padding: 32px 0;
+      padding-left: $mobile-container-padding + 46px;
+      border-bottom: 1px solid #ececec;
+    }
+  }
+
+  &--nojs {
+    .main-header__toggle {
+      display: none;
+    }
+
+    .main-header__container {
+      padding: 0;
+      position: static;
+      transform: none;
+    }
+
+    .main-header__nav {
+      border-top: 1px solid #ececec;
+    }
+
+    .main-header__user-block-link {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
   }
 }
 
