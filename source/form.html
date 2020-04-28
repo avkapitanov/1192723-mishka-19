@@ -49,9 +49,9 @@
 </header>
 
 <main>
-  <section class="main-promo">
+  <section class="main-promo main-promo--secondary">
     <div class="main-promo__container container">
-      <h1 class="main-promo__title">Вязание на заказ</h1>
+      <h1 class="main-promo__title main-promo__title--secondary">Вязание на заказ</h1>
     </div>
   </section>
 
@@ -65,13 +65,13 @@
           <div id="group-type" class="params-group__title">Тип</div>
           <div class="params-group__content">
             <ul class="params-group__list">
-              <li class="params-group__item">
-                <input class="params-group__input params-group__input--radio" type="radio" name="type" value="accessories" id="type-0">
-                <label class="params-group__input-label" for="type-0">Аксессуар для интерьера</label>
+              <li class="params-group__item params-group__item--radio">
+                <input class="params-group__input" type="radio" name="type" value="accessories" id="type-0" checked>
+                <label class="params-group__input-label params-group__input-label--radio" for="type-0">Аксессуар для интерьера</label>
               </li>
-              <li class="params-group__item">
-                <input class="params-group__input params-group__input--radio" type="radio" name="type" value="toy" id="type-1">
-                <label class="params-group__input-label" for="type-1">Детская игрушка</label>
+              <li class="params-group__item params-group__item--radio">
+                <input class="params-group__input" type="radio" name="type" value="toy" id="type-1">
+                <label class="params-group__input-label params-group__input-label--radio" for="type-1">Детская игрушка</label>
               </li>
             </ul>
           </div>
@@ -83,75 +83,75 @@
           <div class="params-group__content params-group__content--colors">
             <ul class="params-group__list params-group__list--colors">
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-0" checked>
-                <label class="params-group__input-label" for="color-0">Белый</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-0" checked>
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-0">Белый</label>
               </li>
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-1" checked>
-                <label class="params-group__input-label" for="color-1">Серый</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-1" checked>
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-1">Серый</label>
               </li>
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-2">
-                <label class="params-group__input-label" for="color-2">«Тиффани»</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-2">
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-2">«Тиффани»</label>
               </li>
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-3">
-                <label class="params-group__input-label" for="color-3">Черный</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-3">
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-3">Черный</label>
               </li>
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-4">
-                <label class="params-group__input-label" for="color-4">Розовый</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-4">
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-4">Розовый</label>
               </li>
               <li class="params-group__item params-group__item--check">
-                <input class="params-group__input params-group__input--checkbox" type="checkbox" name="color" id="color-5">
-                <label class="params-group__input-label" for="color-5">Оранжевый</label>
+                <input class="params-group__input" type="checkbox" name="color" id="color-5">
+                <label class="params-group__input-label params-group__input-label--checkbox" for="color-5">Оранжевый</label>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="order-form__params-group params-group" aria-labelledby="group-name">
+      <div class="order-form__params-group order-form__params-group--person params-group" aria-labelledby="group-name">
         <div class="params-group__container container">
-          <div id="group-name" class="params-group__title">ФИО</div>
+          <div id="group-name" class="params-group__title params-group__title--full-name">ФИО</div>
           <div class="params-group__content">
             <p class="params-group__item params-group__item--text">
-              <label class="params-group__input-label params-group__input-label--person" for="person-0">Имя</label>
+              <label class="params-group__input-label" for="person-0">Имя:</label>
               <input class="params-group__input params-group__input--text" type="text" name="person_name" placeholder="Введите ваше имя*" id="person-0">
             </p>
             <p class="params-group__item params-group__item--text">
-              <label class="params-group__input-label params-group__input-label--person" for="person-1">Фамилия</label>
+              <label class="params-group__input-label" for="person-1">Фамилия:</label>
               <input class="params-group__input params-group__input--text" type="text" name="person_surname" placeholder="Укажите фамилию*" id="person-1">
             </p>
             <p class="params-group__item params-group__item--text">
-              <label class="params-group__input-label params-group__input-label--person" for="person-2">Отчество</label>
-              <input class="params-group__input params-group__input--text" type="text" name="person_second_name" placeholder="Отчество, если желаете" id="person-2">
+              <label class="params-group__input-label" for="person-2">Отчество:</label>
+              <input class="params-group__input params-group__input--text params-group__input--second-name" type="text" name="person_second_name" placeholder="Отчество, если желаете" id="person-2">
             </p>
           </div>
         </div>
       </div>
-      <div class="order-form__params-group params-group" aria-labelledby="group-phone">
+      <div class="order-form__params-group order-form__params-group--phone params-group" aria-labelledby="group-phone">
         <div class="params-group__container container">
           <div id="group-phone" class="params-group__title params-group__title--phone">Тел</div>
           <div class="params-group__content">
             <p class="params-group__item params-group__item--phone">
               <label class="visually-hidden" for="phone">Телефон</label>
-              <input class="params-group__input params-group__input--text" type="text" name="phone" placeholder="+7 XXX XX XX*" id="phone">
+              <input class="params-group__input params-group__input--text params-group__input--phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX*" id="phone">
             </p>
           </div>
         </div>
       </div>
-      <div class="order-form__params-group params-group" aria-labelledby="group-email">
+      <div class="order-form__params-group order-form__params-group--email params-group params-group--email" aria-labelledby="group-email">
         <div class="params-group__container container">
           <div id="group-email" class="params-group__title params-group__title--email">E-mail</div>
           <div class="params-group__content">
-            <p class="params-group__item ">
+            <p class="params-group__item params-group__item--email">
               <label class="visually-hidden" for="email">E-mail</label>
               <input class="params-group__input params-group__input--email" type="email" name="email" placeholder="Ваш Email*" id="email">
             </p>
           </div>
         </div>
       </div>
-      <div class="order-form__params-group params-group" aria-labelledby="group-text">
+      <div class="order-form__params-group order-form__params-group--message params-group" aria-labelledby="group-text">
         <div class="params-group__container container">
           <div id="group-text" class="params-group__title params-group__title--additional">Доп</div>
           <div class="params-group__content">

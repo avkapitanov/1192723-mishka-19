@@ -1,23 +1,58 @@
 .order-form {
   .order-form__params-group {
     border: none;
-    margin: 30px 0;
+    margin: 24px 0 28px;
+
+    &--phone {
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+
+    &--email {
+      margin-bottom: 31px;
+    }
+
+    &--message {
+      margin-bottom: 0;
+    }
   }
 
   .order-form__text {
+    margin-top: -8px;
+
     @include font(13px, 24px);
   }
 
   .order-form__comment {
     @include font(14px, 16px);
-    margin: 17px 0 30px;
+    margin: 17px 0 31px;
+  }
+
+  .order-form__submit {
+    padding: 16px 45px;
+    font-size: 17px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .order-form {
+    .order-form__params-group {
+      margin: 0;
+      padding: 50px 0;
+
+      &:nth-child(3) {
+        background: #f1f1f1;
+      }
+
+      &--person {
+        padding-top: 40px;
+      }
+    }
+
     .order-form__text {
       @include font(17px, 30px);
+      margin-bottom: 10px;
     }
 
     .order-form__bottom {

@@ -1,0 +1,70 @@
+.order-popup {
+  .order-popup__title {
+    @include font(25px, 30px);
+    font-weight: 700;
+    color: #000000;
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .order-popup__property-text {
+    @include font(15px, 30px);
+    color: #444444;
+    text-align: center;
+  }
+
+  .order-popup__property-list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order-popup__property-input {
+    display: none;
+
+    &:checked ~ label {
+      border: 2px solid #63d1bb;
+    }
+  }
+
+  .order-popup__property-label {
+    @include font(17px, 16px);
+    font-weight: 700;
+    display: block;
+    min-width: 82px;
+    padding: 14px 0;
+    text-align: center;
+    border: 2px solid #ececec;
+  }
+
+  .order-form__btn {
+    @include font(17px, 16px);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 18px 0;
+    background-color: #63d1bb;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    width: 100%;
+    margin-top: 31px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .order-popup {
+    .order-popup__title {
+      @include font(30px, 57px);
+      width: auto;
+    }
+
+    .order-popup__property-text {
+      @include font(17px, 30px);
+    }
+
+    .order-popup__property-label {
+      min-width: 112px;
+    }
+  }
+}
