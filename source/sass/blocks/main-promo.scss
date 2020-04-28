@@ -9,7 +9,6 @@
     @include font(27px, 30px);
     color: #000000;
     text-align: center;
-    width: 245px;
     margin: 0 auto;
 
     &--secondary {
@@ -51,12 +50,14 @@
     &::after {
       content: "";
       display: block;
-      height: 24px;
+      height: 23px;
       width: 100%;
       background-image: url("../img/bg-zigzag-fill.svg");
       position: absolute;
-      bottom: -1px;
+      bottom: -4px;
       background-size: contain;
+      background-position: center center;
+      background-repeat: repeat-x;
     }
 
     .main-promo__title {
@@ -92,6 +93,11 @@
       &::after {
         bottom: -8px;
       }
+    }
+
+    &::after {
+      height: 37px;
+      bottom: -11px;
     }
 
     .main-promo__container {

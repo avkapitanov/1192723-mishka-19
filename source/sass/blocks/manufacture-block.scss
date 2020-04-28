@@ -1,17 +1,27 @@
 .manufacture-block {
   color: #444444;
-  padding-top: 94px;
+  padding-top: 97px;
   position: relative;
+  margin-bottom: 63px;
 
   .manufacture-block__title {
-    @include font(14px, 24px);
+    @include font(17px, 24px);
     font-weight: 700;
     border: 1px solid #ededed;
+    border-bottom: none;
     padding: 22px 33px;
+    height: 97px;
     margin: 0;
     position: absolute;
     top: 0;
-    height: 94px;/*temp*/
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .manufacture-block__icon {
+    flex-shrink: 0;
+    margin-right: 23px;
+    margin-top: 8px;
   }
 
   .manufacture-block__text {
@@ -20,7 +30,7 @@
   }
 
   .manufacturer_block__info {
-    padding: 33px;
+    padding: 27px 33px;
     border: 1px solid #ededed;
     border-top: none;
   }
@@ -44,20 +54,34 @@
     padding-top: 0;
     margin-bottom: 63px;
 
-    .manufacture-block__video {
+    .manufacture-block__video-preview {
+      display: block;
       height: 455px;
-      background-color: $bg-grey;/*temp*/
+      width: auto;
+    }
+
+    .manufacture-block__icon {
+      margin-top: 0;
+      margin-right: 33px;
     }
 
     .manufacture-block__title {
       position: static;
+      padding: 32px 40px 0;
+      height: auto;
 
       @include font(20px, 24px);
       border-bottom: none;
+      margin-bottom: 28px;
+    }
+
+    .manufacture-block__title-text {
+      padding-top: 5px;
     }
 
     .manufacturer_block__info {
       border-top: none;
+      padding: 0 39px 45px;
     }
 
     .manufacture-block__text {
@@ -66,6 +90,7 @@
 
     .manufacture-block__order {
       width: 100%;
+      margin-top: 37px;
     }
   }
 }
@@ -80,6 +105,16 @@
       flex-shrink: 0;
     }
 
+    .manufacture-block__title {
+      padding: 40px 55px 0 77px;
+      flex-direction: column;
+      margin-bottom: 33px;
+    }
+
+    .manufacture-block__icon {
+      margin: 0 0 17px;
+    }
+
     .manufacture-block__description {
       display: flex;
       flex-direction: column;
@@ -87,6 +122,12 @@
 
     .manufacturer_block__info {
       flex-grow: 1;
+      padding-left: 77px;
+      padding-right: 55px;
+    }
+
+    .manufacture-block__order {
+      margin-top: 46px;
     }
   }
 }

@@ -30,6 +30,10 @@
     &:nth-child(4) {
       margin-bottom: 30px;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .advantages-list__item-text {

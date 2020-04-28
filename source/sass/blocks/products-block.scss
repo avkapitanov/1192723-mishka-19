@@ -6,3 +6,9 @@
     @include reset-list;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .products-block {
+    margin-bottom: 60px;
+  }
+}
