@@ -1,6 +1,4 @@
 .popular-sections {
-  background-color: $bg-grey;
-
   .popular-sections__link {
     @include font(19px, 24px);
     color: #ffffff;
@@ -32,11 +30,16 @@
 @media (min-width: $tablet-width) {
   .popular-sections {
     .popular-sections__links {
+      position: relative;
       width: $tablet-width;
       padding: 0 $tablet-container-padding;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+
+      &::after {
+        @include zigzag();
+      }
     }
 
     .popular-sections__link {
