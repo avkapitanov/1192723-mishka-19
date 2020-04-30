@@ -8,3 +8,17 @@
   font-size: $s;
   line-height: $lh;
 }
+
+@mixin zigzag() {
+  content: "";
+  display: block;
+  height: 23px;
+  width: 100%;
+  background-image: url("../img/bg-zigzag-fill.svg");
+  position: absolute;
+  bottom: -4px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: repeat-x;
+  left: 0;
+}

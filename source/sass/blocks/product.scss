@@ -42,8 +42,11 @@
 
     .product__image-wrapper {
       width: 50%;
-      background-color: $bg-grey;/*temp*/
-      min-height: 334px;/*temp*/
+    }
+
+    .product__image {
+      width: 334px;
+      height: auto;
     }
 
     .product__info {
@@ -90,7 +93,11 @@
   .product {
     display: flex;
     flex-direction: column;
-    width: 315px;
+    width: 316px;
+
+    .product__image {
+      width: 100%;
+    }
 
     .product__inner {
       display: flex;
