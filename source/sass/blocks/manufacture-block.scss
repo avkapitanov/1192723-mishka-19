@@ -45,6 +45,22 @@
   .manufacture-block__video-preview {
     display: block;
   }
+
+  .manufacture-block__video-wrapper {
+    position: relative;
+  }
+
+  .manufacture-block__button {
+    width: 101px;
+    height: 77px;
+    border: none;
+    background-image: url("../img/icon-play.svg");
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -100,7 +116,7 @@
     flex-direction: row;
     margin-bottom: 105px;
 
-    .manufacture-block__video {
+    .manufacture-block__video-wrapper {
       width: 682px;
       flex-shrink: 0;
     }

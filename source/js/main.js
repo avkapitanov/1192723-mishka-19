@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", function(){
+  ymaps.ready(function () {
+    if (document.querySelector('.contacts-map')) {
+      var myMap = new ymaps.Map("map", {
+          center: [59.938635, 30.323118],
+          zoom: 16,
+          controls: []
+        }, {
+          searchControlProvider: "yandex#search"
+        }),
+
+        myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+          iconLayout: "default#image",
+          iconImageHref: "img/icon-map-pin.svg",
+          iconImageSize: [66, 100],
+          iconImageOffset: [-33, -100]
+        });
+
+      myMap.geoObjects
+        .add(myPlacemark);
+    }
+  });
+
+
   let toggleBtn = document.querySelector('.main-header__toggle');
   let header = document.querySelector('.main-header');
 
