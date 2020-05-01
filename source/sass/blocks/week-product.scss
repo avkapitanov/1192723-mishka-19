@@ -1,21 +1,28 @@
 .week-product {
   @include font(15px, 24px);
-  padding-bottom: 42px;
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 
+  .week-product__container {
+    position: relative;
+    padding-bottom: 40px;
 
-  &::after {
-    content: "";
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
-    height: 6px;
-    background-repeat: repeat-x;
+    &::after {
+      content: "";
+      background-image: url("../img/bg-zigzag-line.svg");
+      height: 6px;
+      background-size: 319px;
+      background-repeat: repeat-x;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      background-position: 8px 0;
+      left: 0;
+    }
+  }
+
+  .week-product__image {
     display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-position: center center;
   }
 
   .week-product__header {
@@ -38,13 +45,12 @@
   }
 
   .week-product__info {
-    padding-bottom: 120px;
+    padding-bottom: 125px;
     position: relative;
   }
 
   .week-product__text {
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0 0 25px 0;
   }
 
   .week-product__price {
@@ -75,11 +81,17 @@
 
 @media (min-width: $tablet-width) {
   .week-product {
-    padding-bottom: 70px;
     margin-bottom: 48px;
 
-    &::after {
-      height: 17px;
+    .week-product__container {
+      padding-bottom: 70px;
+
+      &::after {
+        height: 17px;
+        background-size: 772px;
+        bottom: 0;
+        background-position: -20px 0;
+      }
     }
 
     .week-product__section-name {
@@ -122,10 +134,11 @@
     }
 
     .week-product__description {
-      width: 334px;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      padding-right: 43px;
     }
 
     .week-product__buy {
@@ -144,15 +157,20 @@
 
 @media (min-width: $desktop-width) {
   .week-product {
-    padding-bottom: 98px;
     margin-bottom: 58px;
-
-    &::after {
-      height: 23px;
-    }
 
     .week-product__container {
       padding-top: 79px;
+      padding-bottom: 100px;
+
+      &::after {
+        height: 23px;
+        background-size: 1050px;
+        bottom: 3px;
+        background-position: -26px 0;
+        width: 1050px;
+        left: auto;
+      }
     }
 
     .week-product__header {

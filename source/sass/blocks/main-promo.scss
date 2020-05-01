@@ -34,6 +34,19 @@
 @media (min-width: $tablet-width) {
   .main-promo {
     margin-bottom: 10px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 23px;
+      width: 100%;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      position: absolute;
+      bottom: -4px;
+      background-size: 768px;
+      background-position: center 0;
+    }
 
     &--index {
       background-image: url("../img/hero-tablet@1x.jpg");
@@ -54,7 +67,6 @@
 
     &--secondary {
       margin-bottom: 70px;
-      position: relative;
 
       .main-promo__title {
         margin-top: 0;
@@ -62,31 +74,23 @@
         padding-bottom: 90px;
         min-height: auto;
       }
-
-      .main-promo__container {
-        position: relative;
-
-        &::after {
-          @include zigzag();
-        }
-      }
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-promo {
+    &::after {
+      background-size: 1250px;
+      height: 34px;
+      bottom: -9px;
+    }
+
     &--secondary {
       margin-bottom: 115px;
 
       .main-promo__title {
         padding-bottom: 115px;
-      }
-    }
-
-    .main-promo__container {
-      &::after {
-        height: 37px;
       }
     }
 

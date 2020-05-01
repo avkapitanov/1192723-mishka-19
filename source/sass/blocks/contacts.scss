@@ -8,7 +8,7 @@
 
   .contacts__title {
     @include font(18px, 30px);
-    margin-top: 1px;
+    margin-top: 2px;
     margin-bottom: 26px;
     text-align: left;
   }
@@ -59,7 +59,6 @@
 
   .contacts__map {
     min-height: 457px;
-    background-color: red;
     width: $mobile-width;
     position: relative;
     margin-left: -$mobile-container-padding;
@@ -92,10 +91,6 @@
       margin-top: 0;
     }
 
-    .contacts__mail-value {
-      padding-bottom: 0;
-    }
-
     .contacts__title {
       @include font(43px, 50px);
       display: flex;
@@ -103,6 +98,7 @@
       align-items: center;
       margin-bottom: 35px;
       margin-left: -4px;
+      margin-top: 0;
 
       &::after {
         content: "";
@@ -163,7 +159,7 @@
     }
 
     .contacts__mail-value {
-      line-height: 28px;
+      line-height: 30px;
     }
 
     .contacts__write-us {
