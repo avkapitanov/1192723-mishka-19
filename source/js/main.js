@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
   ymaps.ready(function () {
-    if (document.querySelector('.contacts-map')) {
+    if (document.querySelector(".contacts__map")) {
       var myMap = new ymaps.Map("map", {
           center: [59.938635, 30.323118],
           zoom: 16,
@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
-  let toggleBtn = document.querySelector('.main-header__toggle');
-  let header = document.querySelector('.main-header');
+  let toggleBtn = document.querySelector(".main-header__toggle");
+  let header = document.querySelector(".main-header");
 
-  header.classList.remove('main-header--nojs');
+  header.classList.remove("main-header--nojs");
 
   toggleBtn.addEventListener("click", function () {
-    header.classList.toggle('main-header--opened');
+    header.classList.toggle("main-header--opened");
   });
 
 

@@ -8,3 +8,11 @@
   font-size: $s;
   line-height: $lh;
 }
+
+@mixin hover-opacity() {
+  opacity: 0.6;
+}
+
+@mixin active-opacity() {
+  opacity: 0.3;
+}
