@@ -9,6 +9,7 @@
   text-align: center;
   background-color: #ffffff;
   transition: all $transition-duration $transition-type;
+  cursor: pointer;
 
   &--ghost {
     &:hover {

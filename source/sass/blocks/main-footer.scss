@@ -1,6 +1,6 @@
 .main-footer {
   background-color: #f1f1f1;
-  padding: 25px 0 6px;
+  padding: 27px 0 0;
 
   .main-footer__logo-wrapper {
     display: none;
@@ -9,7 +9,7 @@
 
 @media (min-width: $tablet-width) {
   .main-footer {
-    padding: 35px 0 34px;
+    padding: 56px 0 53px;
 
     .main-footer__inner {
       display: flex;
@@ -20,12 +20,6 @@
     .main-footer__logo-wrapper {
       display: block;
       width: 180px;
-    }
-
-    .main-footer__logo-img {
-      width: 102px;
-      height: 34px;
-      margin-top: -10px;
     }
   }
 }

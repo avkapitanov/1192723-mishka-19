@@ -36,6 +36,11 @@
     padding: 14px 0;
     text-align: center;
     border: 2px solid #ececec;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #c7c7c7;
+    }
   }
 
   .order-form__btn {
@@ -49,6 +54,7 @@
     border: none;
     width: 100%;
     margin-top: 31px;
+    cursor: pointer;
   }
 }
 

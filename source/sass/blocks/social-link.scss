@@ -1,0 +1,15 @@
+.social-link {
+  &:hover {
+    .social-link__img {
+      fill: $footer-aqua-color;
+    }
+  }
+
+  &:active {
+    .social-link__img {
+      fill: $footer-aqua-color;
+
+      @include active-opacity();
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@media (min-width: $tablet-width) {
+  .footer-logo {
+    .footer-logo__img {
+      width: 102px;
+      height: 34px;
+      margin-top: -10px;
+    }
+
+    &:hover {
+      .footer-logo__img {
+        fill: $footer-aqua-color;
+      }
+    }
+
+    &:active {
+      .footer-logo__img {
+        fill: $footer-aqua-color;
+
+        @include active-opacity();
+      }
+    }
+  }
+}
