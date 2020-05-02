@@ -84,17 +84,17 @@
       </ul>
     </nav>
     <div class="main-header__user-block">
-      <a class="main-header__user-block-link main-header__search-link" href="#" aria-label="Поиск по сайту">
-        <svg class="main-header__user-block-icon main-header__search-icon" width="17.6px" height="17.6px">
+      <a class="main-header__user-block-link user-block-link user-block-link--search" href="#" aria-label="Поиск по сайту">
+        <svg class="user-block-link__icon" width="17.6px" height="17.6px">
           <use xlink:href="#icon-search"></use>
         </svg>
-        <span class="main-header__search-text">Поиск по сайту</span>
+        <span class="user-block-link__text user-block-link__text--search">Поиск по сайту</span>
       </a>
-      <a class="main-header__user-block-link main-header__basket-link main-header__basket-link--empty" href="#" aria-label="Корзина">
-        <svg class="main-header__user-block-icon main-header__basket-icon" width="20.29px" height="18.84px">
+      <a class="main-header__user-block-link user-block-link user-block-link--basket" href="#" aria-label="Корзина">
+        <svg class="user-block-link__icon" width="20.29px" height="18.84px">
           <use xlink:href="#icon-cart"></use>
         </svg>
-        <span class="main-header__basket-text">Корзина: пока пуста</span>
+        <span class="user-block-link__text user-block-link__text--basket">Корзина: пока пуста</span>
       </a>
     </div>
     <p class="main-header__delivery">Бесплатная доставка по России</p>
@@ -104,22 +104,22 @@
 <main>
   <section class="main-promo main-promo--index">
     <div class="main-promo__container container">
-      <h1 class="main-promo__title">Милые штуки ручной<br>работы для дома</h1>
+      <h1 class="main-promo__title">Милые штуки ручной работы&nbsp;для дома</h1>
     </div>
     <div class="main-promo__sections popular-sections">
-      <div class="popular-sections__links">
-        <a class="popular-sections__link" href="catalog-interior.html">
-          <div class="popular-sections__link-inner">
-            <span class="popular-sections__name">Предметы интерьера</span>
-            <svg class="popular-sections__image" width="40.22px" height="62.41px" role="img" aria-label="Предметы интерьера" focusable="false">
+      <div class="main-promo__section-links">
+        <a class="popular-sections__link popular-link" href="catalog-interior.html">
+          <div class="popular-link__inner">
+            <span class="popular-link__text">Предметы интерьера</span>
+            <svg class="popular-link__icon" width="40.22px" height="62.41px" role="img" aria-label="Предметы интерьера" focusable="false">
               <use xlink:href="#icon-interior"></use>
             </svg>
           </div>
         </a>
-        <a class="popular-sections__link" href="catalog-toys.html">
-          <div class="popular-sections__link-inner">
-            <span class="popular-sections__name">Детские игрушки</span>
-            <svg class="popular-sections__image" width="60px" height="59.62px" role="img" aria-label="Детские игрушки" focusable="false">
+        <a class="popular-sections__link popular-link" href="catalog-toys.html">
+          <div class="popular-link__inner">
+            <span class="popular-link__text">Детские игрушки</span>
+            <svg class="popular-link__icon" width="60px" height="59.62px" role="img" aria-label="Детские игрушки" focusable="false">
               <use xlink:href="#icon-toy"></use>
             </svg>
           </div>
@@ -156,7 +156,9 @@
             <p class="week-product__price">
               Цена: 990 руб.
             </p>
-            <a class="week-product__buy-btn btn" href="#">Заказать</a>
+            <a class="week-product__buy-btn btn btn--ghost" href="#">
+              <span class="btn-text">Заказать</span>
+            </a>
           </div>
         </div>
         <picture>
@@ -250,7 +252,9 @@
           </svg>
         </button>
       </p>
-      <a class="reviews__write btn" href="add-review.html">Написать</a>
+      <a class="reviews__write btn btn--ghost" href="add-review.html">
+        <span class="btn-text">Написать</span>
+      </a>
     </div>
   </section>
 
@@ -270,7 +274,9 @@
             </address>
           </div>
         </div>
-        <a class="contacts__write-us btn" href="write-us.html">Напишите нам</a>
+        <a class="contacts__write-us btn btn--ghost" href="write-us.html">
+          <span class="btn-text">Напишите нам</span>
+        </a>
       </div>
       <div id="map" class="contacts__map"></div>
     </div>

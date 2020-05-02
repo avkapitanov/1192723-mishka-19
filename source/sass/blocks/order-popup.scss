@@ -24,7 +24,7 @@
     display: none;
 
     &:checked ~ label {
-      border: 2px solid #63d1bb;
+      border: 2px solid $aqua-color;
     }
   }
 
@@ -43,7 +43,7 @@
     color: #ffffff;
     font-weight: bold;
     padding: 18px 0;
-    background-color: #63d1bb;
+    background-color: $aqua-color;
     text-transform: uppercase;
     text-align: center;
     border: none;

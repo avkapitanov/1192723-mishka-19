@@ -125,7 +125,7 @@
 
   .params-group__title {
     @include font(17px, 17px);
-    color: #63d1bb;
+    color: $aqua-color;
     text-transform: uppercase;
     margin-bottom: 24px;
     display: flex;
@@ -142,7 +142,7 @@
       content: "";
       display: block;
       height: 1px;
-      background-color: #63d1bb;
+      background-color: $aqua-color;
       width: 198px;
     }
 

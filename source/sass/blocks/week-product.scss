@@ -40,7 +40,7 @@
   .week-product__type {
     @include font(17px, 20px);
     font-weight: 700;
-    color: #63d1bb;
+    color: $aqua-color;
     text-transform: uppercase;
   }
 

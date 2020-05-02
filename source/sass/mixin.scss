@@ -16,3 +16,17 @@
 @mixin active-opacity() {
   opacity: 0.3;
 }
+
+@mixin icon-default() {
+  fill: #221f1f;
+  opacity: 0.2;
+}
+
+@mixin icon-hover() {
+  fill: $aqua-color;
+  opacity: 1;
+}
+
+@mixin icon-active() {
+  opacity: 0.3;
+}
