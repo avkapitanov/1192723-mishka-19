@@ -1,3 +1,12 @@
+if ('NodeList' in window && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   ymaps.ready(function () {
     if (document.querySelector(".contacts__map")) {
@@ -22,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  let toggleBtn = document.querySelector(".main-header__toggle");
-  let header = document.querySelector(".main-header");
+  var toggleBtn = document.querySelector(".main-header__toggle");
+  var header = document.querySelector(".main-header");
 
   if (header) {
     header.classList.remove("main-header--nojs");
@@ -35,13 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  let formLink = document.querySelector(".week-product__buy-btn");
-  let popup = document.querySelector(".modal");
-  let overlay = document.querySelector(".modal__overlay");
+  var formLink = document.querySelector(".week-product__buy-btn");
+  var popup = document.querySelector(".modal");
+  var overlay = document.querySelector(".modal__overlay");
+  var productNameInput = document.querySelector(".order-popup__product");
 
   if (formLink) {
     formLink.addEventListener("click", function (evt) {
       evt.preventDefault();
+      productNameInput.value = evt.currentTarget.dataset["product"];
       popup.classList.add("modal--opened");
     });
   }
@@ -62,4 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  var productBuyBtn = document.querySelectorAll(".product__buy");
+
+  productBuyBtn.forEach(function(buyBtn) {
+    buyBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      productNameInput.value = evt.currentTarget.dataset["product"];
+      popup.classList.add("modal--opened");
+    })
+  });
 });
