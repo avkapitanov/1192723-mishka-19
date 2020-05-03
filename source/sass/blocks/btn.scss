@@ -8,4 +8,19 @@
   padding: 18px 39px;
   text-align: center;
   background-color: #ffffff;
+  transition: all $transition-duration $transition-type;
+  cursor: pointer;
+
+  &--ghost {
+    &:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    &:active {
+      .btn-text {
+        opacity: 0.3;
+      }
+    }
+  }
 }

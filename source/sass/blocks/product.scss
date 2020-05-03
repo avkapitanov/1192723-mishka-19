@@ -4,6 +4,14 @@
 
     @include font(17px, 24px);
     font-weight: 700;
+
+    &:hover {
+      @include hover-opacity();
+    }
+
+    &:active {
+      @include active-opacity();
+    }
   }
 
   .product__params {
@@ -25,6 +33,15 @@
   .product__info {
     border: 1px solid #ededed;
     padding: 27px 27px 25px;
+    transition: all $transition-duration $transition-type;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .product__image {
@@ -33,6 +50,18 @@
 
   .product__name {
     margin: 0;
+  }
+
+  .product__buy__basket-icon {
+    @include icon-default();
+
+    &:hover {
+      @include icon-hover();
+    }
+
+    &:active {
+      @include icon-active();
+    }
   }
 }
 
@@ -105,7 +134,7 @@
 
     .product__image-wrapper {
       width: 100%;
-      background-color: $bg-grey;/*temp*/
+      background-color: $bg-grey; /*temp*/
       display: block;
       min-height: 462px;
     }

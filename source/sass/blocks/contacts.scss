@@ -35,6 +35,15 @@
   .contacts__mail-value {
     display: inline-block;
     border-bottom: 1px solid #62d1ba;
+    color: #444444;
+
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .contacts__address {
@@ -142,7 +151,7 @@
       justify-content: space-between;
       margin-bottom: 0;
       padding-left: 175px;
-      padding-top: 68px;
+      padding-top: 70px;
       text-align: left;
     }
 
@@ -154,7 +163,8 @@
 
       &::after {
         position: absolute;
-        left: -110px;
+        left: -108px;
+        top: -8px;
       }
     }
 

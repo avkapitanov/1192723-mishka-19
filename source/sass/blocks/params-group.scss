@@ -5,6 +5,7 @@
 
   .params-group__item {
     margin-bottom: 15px;
+    position: relative;
 
     &--check {
       margin-bottom: 18px;
@@ -17,33 +18,11 @@
     &--email {
       margin: 0;
       position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-        right: 4px;
-        top: 12px;
-      }
     }
 
     &--phone {
       margin: 0;
       position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 25px;
-        height: 24px;
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-        right: 8px;
-        top: 18px;
-      }
     }
 
     &--textarea {
@@ -97,6 +76,12 @@
       border-bottom: 2px solid #444444;
       height: 52px;
 
+      &:hover,
+      &:focus {
+        border-color: #62d1ba;
+        outline: none;
+      }
+
       &::placeholder {
         opacity: 0.3;
       }
@@ -116,6 +101,16 @@
       display: block;
 
       @include font(17px, 18px);
+
+      &::placeholder {
+        opacity: 0.3;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: #62d1ba;
+        outline: none;
+      }
     }
 
     &--second-name {
@@ -123,9 +118,14 @@
     }
   }
 
+  .params-group__item-icon {
+    fill: #000000;
+    opacity: 0.2;
+  }
+
   .params-group__title {
     @include font(17px, 17px);
-    color: #63d1bb;
+    color: $aqua-color;
     text-transform: uppercase;
     margin-bottom: 24px;
     display: flex;
@@ -142,7 +142,7 @@
       content: "";
       display: block;
       height: 1px;
-      background-color: #63d1bb;
+      background-color: $aqua-color;
       width: 198px;
     }
 
@@ -161,6 +161,7 @@
 
   .params-group__input-label {
     display: block;
+    cursor: pointer;
 
     @include font(17px, 18px);
     font-weight: 700;
@@ -184,6 +185,20 @@
         border: 2px solid #444444;
         border-radius: 50%;
       }
+
+      &:hover {
+        &::before {
+          border-color: #62d1ba;
+        }
+      }
+
+      &:active {
+        &::before {
+          border-color: #444444;
+
+          @include active-opacity();
+        }
+      }
     }
 
     &--checkbox {
@@ -201,6 +216,20 @@
         width: 40px;
         height: 39px;
         border: 2px solid #444444;
+      }
+
+      &:hover {
+        &::before {
+          border-color: #62d1ba;
+        }
+      }
+
+      &:active {
+        &::before {
+          border-color: #444444;
+
+          @include active-opacity();
+        }
       }
     }
   }
