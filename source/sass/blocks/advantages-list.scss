@@ -4,6 +4,27 @@
 
   .advantages-list__item-icon {
     fill: $aqua-color;
+
+    &--flower {
+      margin-left: 8px;
+    }
+
+    &--heart {
+      margin-left: 8px;
+      margin-top: 1px;
+    }
+
+    &--ball {
+      margin-left: 3px;
+    }
+
+    &--rocket {
+      margin-left: -5px;
+    }
+
+    &--gift {
+      margin-left: 3px;
+    }
   }
 
   .advantages-list__item {
@@ -11,16 +32,21 @@
     font-weight: 700;
     margin-bottom: 35px;
 
-    &--handed {
+    &--ball {
       order: 4;
+      margin-bottom: 32px;
     }
 
-    &--fatherland {
+    &--rocket {
       order: 5;
     }
 
     &--gift {
       order: 6;
+    }
+
+    &--heart {
+      margin-bottom: 32px;
     }
 
     &:first-child {
@@ -41,14 +67,22 @@
   }
 
   .advantages-list__item-text {
-    margin-top: 15px;
+    margin-top: 14px;
 
     &--style {
       margin-top: 22px;
     }
 
-    &--fatherland {
+    &--rocket {
       margin-top: 23px;
+    }
+
+    &--heart {
+      margin-top: 18px;
+    }
+
+    &--gift {
+      margin-top: 17px;
     }
   }
 }
@@ -59,13 +93,27 @@
     flex-wrap: wrap;
     flex-direction: row;
 
+    .advantages-list__item-icon {
+      &--ball {
+        margin-top: 3px;
+      }
+
+      &--rocket {
+        margin-top: 3px;
+      }
+
+      &--gift {
+        margin-top: -1px;
+      }
+    }
+
     .advantages-list__item {
       width: 50%;
 
       @include font(20px, 22px);
-      margin-bottom: 63px;
+      margin-bottom: 57px;
 
-      &--handed {
+      &--ball {
         order: 2;
       }
 
@@ -73,7 +121,7 @@
         order: 3;
       }
 
-      &--like {
+      &--heart {
         order: 5;
       }
 
@@ -82,7 +130,7 @@
       }
 
       &:nth-child(4) {
-        margin-bottom: 63px;
+        margin-bottom: 60px;
       }
 
       &:nth-child(5) {
@@ -91,6 +139,12 @@
 
       &:nth-child(3n) {
         margin-bottom: 0;
+      }
+    }
+
+    .advantages-list__item-text {
+      &--gift {
+        margin-top: 15px;
       }
     }
   }

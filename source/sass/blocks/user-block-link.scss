@@ -8,6 +8,8 @@
   .user-block-link__icon {
     position: absolute;
     left: $mobile-container-padding;
+    top: 50%;
+    margin-top: -9px;
 
     @include icon-default();
   }

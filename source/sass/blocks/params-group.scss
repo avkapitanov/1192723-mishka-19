@@ -1,4 +1,7 @@
 .params-group {
+  border: none;
+  margin: 24px 0 28px;
+
   .params-group__list {
     @include reset-list;
   }
@@ -12,7 +15,7 @@
     }
 
     &--text {
-      margin: 0 0 23px;
+      margin: 0 0 22px;
     }
 
     &--email {
@@ -87,11 +90,6 @@
       }
     }
 
-    &--phone {
-      font-size: 19px;
-      height: 58px;
-    }
-
     &--textarea {
       min-height: 142px;
       border: 2px solid #444444;
@@ -112,15 +110,25 @@
         outline: none;
       }
     }
-
-    &--second-name {
-      height: 48px;
-    }
   }
 
   .params-group__item-icon {
     fill: #000000;
     opacity: 0.2;
+
+    &--phone {
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      right: 8px;
+    }
+
+    &--email {
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 5px;
+    }
   }
 
   .params-group__title {
@@ -134,28 +142,12 @@
     justify-content: space-between;
     font-weight: 700;
 
-    &--full-name {
-      margin-bottom: 28px;
-    }
-
     &::after {
       content: "";
       display: block;
       height: 1px;
       background-color: $aqua-color;
       width: 198px;
-    }
-
-    &--email {
-      &::after {
-        width: 179px;
-      }
-    }
-
-    &--phone,
-    &--email,
-    &--additional {
-      margin-bottom: 0;
     }
   }
 
@@ -235,14 +227,59 @@
   }
 
   &--email {
+    margin-bottom: 31px;
+
     .params-group__item {
       margin-top: 7px;
+    }
+
+    .params-group__title {
+      margin-bottom: 0;
+
+      &::after {
+        width: 179px;
+      }
+    }
+  }
+
+  &--person {
+    .params-group__title {
+      margin-bottom: 28px;
+
+      &--full-name {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &--phone {
+    margin-top: 31px;
+    margin-bottom: 30px;
+
+    .params-group__title {
+      margin-bottom: 0;
+    }
+
+    .params-group__input {
+      font-size: 19px;
+      height: 59px;
+    }
+  }
+
+  &--message {
+    margin-bottom: 0;
+
+    .params-group__title {
+      margin-bottom: 0;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
   .params-group {
+    margin: 0;
+    padding: 49px 0;
+
     .params-group__container {
       display: flex;
       align-items: flex-start;
@@ -252,17 +289,24 @@
       background-color: #f1f1f1;
     }
 
+    .params-group__item-icon {
+      &--phone {
+        right: 26px;
+        margin-top: -15px;
+      }
+
+      &--email {
+        right: 23px;
+      }
+    }
+
     .params-group__title {
       width: 167px;
       flex-shrink: 0;
-      margin: 15px 0 0 0;
+      margin: 17px 0 0 0;
 
       &::after {
         display: none;
-      }
-
-      &--full-name {
-        margin: 0;
       }
     }
 
@@ -284,8 +328,17 @@
       }
 
       &--check {
-        width: 50%;
-        margin-bottom: 22px;
+        width: 47%;
+        margin-top: 22px;
+        margin-bottom: 0;
+
+        &:nth-child(-n+2) {
+          margin-top: 0;
+        }
+
+        &:nth-child(2n) {
+          margin-left: 27px;
+        }
       }
     }
 
@@ -329,9 +382,12 @@
         background-size: 33px 22px;
       }
 
-      &--text {
+      &--text,
+      &--email {
         @include font(19px, 18px);
         margin-left: 25px;
+        height: 53px;
+        padding-left: 17px;
       }
     }
 
@@ -339,6 +395,57 @@
       &--colors {
         display: flex;
         flex-wrap: wrap;
+      }
+    }
+
+    &--person {
+      padding-top: 48px;
+
+      .params-group__item {
+        &--text {
+          align-items: center;
+        }
+      }
+    }
+
+    &--colors {
+      background: #f1f1f1;
+    }
+
+    &--phone,
+    &--email {
+      background: #f1f1f1;
+
+      .params-group__input {
+        background-color: transparent;
+        margin-left: 0;
+      }
+    }
+
+    &--phone {
+      padding-bottom: 0;
+      padding-top: 51px;
+    }
+
+    &--email {
+      padding-top: 17px;
+
+      .params-group__title {
+        margin-top: 24px;
+      }
+    }
+
+    &--type {
+      .params-group__title {
+        margin-top: 15px;
+      }
+    }
+
+    &--message {
+      padding-bottom: 41px;
+      
+      .params-group__input {
+        @include font(19px, 18px);
       }
     }
   }
