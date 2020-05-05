@@ -48,12 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var formLink = document.querySelector(".week-product__buy-btn");
   var popup = document.querySelector(".modal");
   var overlay = document.querySelector(".modal__overlay");
-  var productNameInput = document.querySelector(".order-popup__product");
 
   if (formLink) {
     formLink.addEventListener("click", function (evt) {
       evt.preventDefault();
-      productNameInput.value = evt.currentTarget.dataset["product"];
       popup.classList.add("modal--opened");
     });
   }
@@ -83,19 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.classList.add("modal--opened");
     })
   });
-
-  var videoBlock = document.querySelectorAll( ".manufacture-block__video-wrapper" );
-
-  for (var i = 0; i < videoBlock.length; i++) {
-    videoBlock[i].addEventListener( "click", function() {
-      var iframe = document.createElement( "iframe" );
-
-      iframe.setAttribute( "frameborder", "0" );
-      iframe.setAttribute( "allowfullscreen", "" );
-      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
-
-      this.innerHTML = "";
-      this.appendChild( iframe );
-    } );
-  };
 });

@@ -38,6 +38,10 @@
   }
 
   .params-group__input {
+    &:active ~ label {
+
+    }
+
     &[type="radio"],
     &[type="checkbox"] {
       position: absolute;
@@ -53,6 +57,11 @@
       clip-path: inset(100%);
       clip: rect(0 0 0 0);
       overflow: hidden;
+    }
+
+    &[type="radio"]:focus ~ label::before,
+    &[type="checkbox"]:focus ~ label::before {
+      border-color: #62d1ba;
     }
 
     &[type="radio"]:checked ~ label::after {
