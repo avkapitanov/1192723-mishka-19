@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Мишка</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -182,12 +185,13 @@
       <h2 class="reviews__title">Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item">
-          <blockquote class="reviews__content" cite="Анастасия Красильникова">
+          <blockquote class="reviews__content">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
               инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
               стильными, а также набирают больше лайков!
             </p>
+            <cite class="visually-hidden">Анастасия Красильникова</cite>
           </blockquote>
           <div class="reviews__author-info">
             <span class="reviews__author-name">Анастасия Красильникова</span>
@@ -224,7 +228,7 @@
           </div>
           <div class="contacts__address">
             <span class="contacts__address-name">адрес:</span>
-            <address class="contacts__address-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д.&nbsp19/8, офис
+            <address class="contacts__address-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д.&nbsp;19/8, офис
               101
             </address>
           </div>

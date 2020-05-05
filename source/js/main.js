@@ -8,7 +8,7 @@ if ("NodeList" in window && !NodeList.prototype.forEach) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.ymaps) { 
+  if (window.ymaps) {
     ymaps.ready(function () {
       if (document.querySelector(".contacts__map")) {
         var myMap = new ymaps.Map("map", {
