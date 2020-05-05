@@ -8,28 +8,29 @@ if ("NodeList" in window && !NodeList.prototype.forEach) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  ymaps.ready(function () {
-    if (document.querySelector(".contacts__map")) {
-      var myMap = new ymaps.Map("map", {
-          center: [59.938635, 30.323118],
-          zoom: 16,
-          controls: []
-        }, {
-          searchControlProvider: "yandex#search"
-        }),
+  if (window.ymaps) { 
+    ymaps.ready(function () {
+      if (document.querySelector(".contacts__map")) {
+        var myMap = new ymaps.Map("map", {
+            center: [59.938635, 30.323118],
+            zoom: 16,
+            controls: []
+          }, {
+            searchControlProvider: "yandex#search"
+          }),
 
-        myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
-          iconLayout: "default#image",
-          iconImageHref: "img/icon-map-pin.svg",
-          iconImageSize: [66, 100],
-          iconImageOffset: [-33, -100]
-        });
+          myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+            iconLayout: "default#image",
+            iconImageHref: "img/icon-map-pin.svg",
+            iconImageSize: [66, 100],
+            iconImageOffset: [-33, -100]
+          });
 
-      myMap.geoObjects
-        .add(myPlacemark);
-    }
-  });
-
+        myMap.geoObjects
+          .add(myPlacemark);
+      }
+    });
+  }
 
   var toggleBtn = document.querySelector(".main-header__toggle");
   var header = document.querySelector(".main-header");
