@@ -4,6 +4,13 @@
   position: relative;
   margin-bottom: 63px;
 
+  iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
   .manufacture-block__title {
     @include font(17px, 24px);
     font-weight: 700;
@@ -95,9 +102,12 @@
     padding-top: 0;
     margin-bottom: 63px;
 
+    .manufacture-block__video-wrapper {
+      height: 455px;
+    }
+
     .manufacture-block__video-preview {
       display: block;
-      height: 455px;
       width: auto;
     }
 
