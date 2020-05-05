@@ -1,22 +1,4 @@
 .order-form {
-  .order-form__params-group {
-    border: none;
-    margin: 24px 0 28px;
-
-    &--phone {
-      margin-bottom: 32px;
-      margin-top: 32px;
-    }
-
-    &--email {
-      margin-bottom: 31px;
-    }
-
-    &--message {
-      margin-bottom: 0;
-    }
-  }
-
   .order-form__text {
     margin-top: -8px;
 
@@ -37,19 +19,6 @@
 
 @media (min-width: $tablet-width) {
   .order-form {
-    .order-form__params-group {
-      margin: 0;
-      padding: 50px 0;
-
-      &:nth-child(3) {
-        background: #f1f1f1;
-      }
-
-      &--person {
-        padding-top: 40px;
-      }
-    }
-
     .order-form__text {
       @include font(17px, 30px);
       margin-bottom: 10px;
@@ -59,10 +28,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 13px;
     }
 
     .order-form__comment {
       order: 2;
+      margin-bottom: 0;
+      margin-top: -5px;
+    }
+
+    .order-form__comment {
+      @include font(17px, 30px);
+    }
+
+    .order-form__submit {
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }

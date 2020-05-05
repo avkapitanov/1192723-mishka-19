@@ -1,4 +1,10 @@
 .order-block {
   margin-top: 20px;
-  margin-bottom: 57px;
+  margin-bottom: 54px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-block {
+    margin-bottom: 50px;
+  }
 }
