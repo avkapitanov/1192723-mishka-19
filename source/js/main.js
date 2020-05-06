@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
   productBuyBtn.forEach(function(buyBtn) {
     buyBtn.addEventListener("click", function (evt) {
       evt.preventDefault();
-      productNameInput.value = evt.currentTarget.dataset["product"];
       popup.classList.add("modal--opened");
     })
   });
