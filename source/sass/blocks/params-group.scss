@@ -38,10 +38,6 @@
   }
 
   .params-group__input {
-    &:active ~ label {
-
-    }
-
     &[type="radio"],
     &[type="checkbox"] {
       position: absolute;
@@ -444,7 +440,8 @@
     }
 
     &--email {
-      padding-top: 17px;
+      padding-top: 16px;
+      padding-bottom: 50px;
 
       .params-group__title {
         margin-top: 24px;
