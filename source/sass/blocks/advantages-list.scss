@@ -109,21 +109,10 @@
 
     .advantages-list__item {
       width: 50%;
+      order: 0;
 
       @include font(20px, 22px);
       margin-bottom: 57px;
-
-      &--ball {
-        order: 2;
-      }
-
-      &--nordic {
-        order: 3;
-      }
-
-      &--heart {
-        order: 5;
-      }
 
       &:nth-child(1) {
         margin-bottom: 55px;

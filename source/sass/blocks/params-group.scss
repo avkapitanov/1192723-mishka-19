@@ -40,7 +40,24 @@
   .params-group__input {
     &[type="radio"],
     &[type="checkbox"] {
-      display: none;
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+
+      white-space: nowrap;
+
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    &[type="radio"]:focus ~ label::before,
+    &[type="checkbox"]:focus ~ label::before {
+      border-color: #62d1ba;
     }
 
     &[type="radio"]:checked ~ label::after {
@@ -197,6 +214,7 @@
       padding-left: 62px;
       padding-top: 12px;
       min-height: 43px;
+      word-break: break-word;
 
       &::before {
         content: "";
@@ -245,10 +263,6 @@
   &--person {
     .params-group__title {
       margin-bottom: 28px;
-
-      &--full-name {
-        margin-bottom: 28px;
-      }
     }
   }
 
@@ -402,9 +416,7 @@
       padding-top: 48px;
 
       .params-group__item {
-        &--text {
-          align-items: center;
-        }
+        align-items: center;
       }
     }
 
@@ -428,7 +440,8 @@
     }
 
     &--email {
-      padding-top: 17px;
+      padding-top: 16px;
+      padding-bottom: 50px;
 
       .params-group__title {
         margin-top: 24px;
@@ -469,6 +482,39 @@
 
       &--colors {
         padding-right: 0;
+      }
+    }
+
+    .params-group__list {
+      &--colors {
+        .params-group__item {
+          margin: 0;
+          margin-bottom: 23px;
+
+          &:nth-last-child(-n+3) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .params-group__item-icon {
+      &--phone {
+        right: 8px;
+      }
+
+      &--email {
+        right: 4px;
+      }
+    }
+
+    &--message {
+      padding-bottom: 35px;
+    }
+
+    &--type {
+      .params-group__title {
+        padding-left: 65px;
       }
     }
   }

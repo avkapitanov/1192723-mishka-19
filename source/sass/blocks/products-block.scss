@@ -7,6 +7,12 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .products-block {
+    margin-bottom: 52px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .products-block {
     margin-bottom: 60px;

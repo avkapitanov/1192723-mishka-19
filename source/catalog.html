@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>Каталог товаров | HTML Academy: Мишка</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -85,7 +88,7 @@
             <p class="product__params">Рост 30 см, вес 200 г</p>
             <p class="product__actions">
               <span class="product__price">1 200 руб.</span>
-              <a class="product__buy" href="#" aria-label="Добавить в корзину" data-product="Зайчик-попрыгайчик">
+              <a class="product__buy" href="#" aria-label="Добавить в корзину">
                 <svg class="product__buy__basket-icon" width="20.29" height="18.84">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -111,7 +114,7 @@
             <p class="product__params">Диаметр 15 см, высота 10 см</p>
             <p class="product__actions">
               <span class="product__price">690 руб.</span>
-              <a class="product__buy" href="#" aria-label="Добавить в корзину" data-product="Корзинка для белья">
+              <a class="product__buy" href="#" aria-label="Добавить в корзину">
                 <svg class="product__buy__basket-icon" width="20.29" height="18.84">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -137,7 +140,7 @@
             <p class="product__params">Диаметр 30 см, высота 30 см</p>
             <p class="product__actions">
               <span class="product__price">1 500 руб.</span>
-              <a class="product__buy" href="#" aria-label="Добавить в корзину" data-product="Большая корзинка для игрушек">
+              <a class="product__buy" href="#" aria-label="Добавить в корзину">
                 <svg class="product__buy__basket-icon" width="20.29" height="18.84">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -170,7 +173,7 @@
             Процесс производства
           </span>
         </h2>
-        <div class="manufacturer_block__info">
+        <div class="manufacture-block__info">
           <p class="manufacture-block__text">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           </p>
@@ -215,7 +218,7 @@
     </ul>
     <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
       Разработано
-      <svg class="copyright-link__img" width="26.94" height="34.09" role="img">
+      <svg class="copyright__img" width="26.94" height="34.09" role="img">
         <use xlink:href="#logo-htmlacademy"></use>
       </svg>
     </a>
@@ -225,7 +228,6 @@
 <div class="modal">
   <div class="modal__inner modal__inner--order">
     <form class="modal__form order-popup" method="post" action="https://echo.htmlacademy.ru">
-      <input class="order-popup__product" type="hidden" name="product" value="">
       <p class="order-popup__title">Добавить в корзину</p>
       <div class="order-popup__properties">
         <p class="order-popup__property-text">Выберите размер:</p>
@@ -234,7 +236,7 @@
             <input class="order-popup__property-input" type="radio" name="type" value="s" id="type-s" checked>
             <label class="order-popup__property-label" for="type-s">S</label>
           </li>
-          <li class="order-form__property-item">
+          <li class="order-popup__property-item">
             <input class="order-popup__property-input" type="radio" name="type" value="m" id="type-m">
             <label class="order-popup__property-label" for="type-m">M</label>
           </li>
@@ -244,7 +246,7 @@
           </li>
         </ul>
       </div>
-      <button class="order-form__btn" type="submit">Добавить</button>
+      <button class="order-popup__btn" type="submit">Добавить</button>
     </form>
   </div>
   <div class="modal__overlay"></div>

@@ -35,15 +35,13 @@
       order: 2;
       margin-bottom: 0;
       margin-top: -5px;
-    }
 
-    .order-form__comment {
       @include font(17px, 30px);
     }
 
     .order-form__submit {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 28px;
+      padding-right: 32px;
     }
   }
 }

@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Мишка</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -66,7 +69,7 @@
         <a class="popular-sections__link popular-link" href="catalog-interior.html">
           <div class="popular-link__inner">
             <span class="popular-link__text">Предметы интерьера</span>
-            <svg class="popular-link__icon" width="40.22" height="62.41" role="img" aria-label="Предметы интерьера" focusable="false">
+            <svg class="popular-link__icon popular-link__icon--interior" width="40.22" height="62.41" role="img" aria-label="Предметы интерьера" focusable="false">
               <use xlink:href="#icon-interior"></use>
             </svg>
           </div>
@@ -74,7 +77,7 @@
         <a class="popular-sections__link popular-link" href="catalog-toys.html">
           <div class="popular-link__inner">
             <span class="popular-link__text">Детские игрушки</span>
-            <svg class="popular-link__icon" width="60" height="59.62" role="img" aria-label="Детские игрушки" focusable="false">
+            <svg class="popular-link__icon popular-link__icon--toy" width="60" height="59.62" role="img" aria-label="Детские игрушки" focusable="false">
               <use xlink:href="#icon-toy"></use>
             </svg>
           </div>
@@ -111,7 +114,7 @@
             <p class="week-product__price">
               Цена: 990 руб.
             </p>
-            <a class="week-product__buy-btn btn btn--ghost" href="#" data-product="Товар недели: Вязаные корзинки">
+            <a class="week-product__buy-btn btn btn--ghost" href="#">
               <span class="btn-text">Заказать</span>
             </a>
           </div>
@@ -182,12 +185,13 @@
       <h2 class="reviews__title">Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item">
-          <blockquote class="reviews__content" cite="Анастасия Красильникова">
+          <blockquote class="reviews__content">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
               инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
               стильными, а также набирают больше лайков!
             </p>
+            <cite class="visually-hidden">Анастасия Красильникова</cite>
           </blockquote>
           <div class="reviews__author-info">
             <span class="reviews__author-name">Анастасия Красильникова</span>
@@ -224,7 +228,7 @@
           </div>
           <div class="contacts__address">
             <span class="contacts__address-name">адрес:</span>
-            <address class="contacts__address-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д.&nbsp19/8, офис
+            <address class="contacts__address-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д.&nbsp;19/8, офис
               101
             </address>
           </div>
@@ -270,7 +274,7 @@
     </ul>
     <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
       Разработано
-      <svg class="copyright-link__img" width="26.94" height="34.09" role="img">
+      <svg class="copyright__img" width="26.94" height="34.09" role="img">
         <use xlink:href="#logo-htmlacademy"></use>
       </svg>
     </a>
@@ -280,7 +284,6 @@
 <div class="modal">
   <div class="modal__inner modal__inner--order">
     <form class="modal__form order-popup" method="post" action="https://echo.htmlacademy.ru">
-      <input class="order-popup__product" type="hidden" name="product" value="">
       <p class="order-popup__title">Добавить в корзину</p>
       <div class="order-popup__properties">
         <p class="order-popup__property-text">Выберите размер:</p>
@@ -289,7 +292,7 @@
             <input class="order-popup__property-input" type="radio" name="type" value="s" id="type-s" checked>
             <label class="order-popup__property-label" for="type-s">S</label>
           </li>
-          <li class="order-form__property-item">
+          <li class="order-popup__property-item">
             <input class="order-popup__property-input" type="radio" name="type" value="m" id="type-m">
             <label class="order-popup__property-label" for="type-m">M</label>
           </li>
@@ -299,7 +302,7 @@
           </li>
         </ul>
       </div>
-      <button class="order-form__btn" type="submit">Добавить</button>
+      <button class="order-popup__btn" type="submit">Добавить</button>
     </form>
   </div>
   <div class="modal__overlay"></div>

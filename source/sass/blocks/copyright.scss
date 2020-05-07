@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
 
-  .copyright-link__img {
+  .copyright__img {
     margin-top: 4px;
     fill: $aqua-color;
   }
@@ -17,7 +17,7 @@
   }
 
   &:hover {
-    .copyright-link__img {
+    .copyright__img {
       fill: $footer-aqua-color;
     }
   }
@@ -25,7 +25,7 @@
   &:active {
     @include active-opacity();
 
-    .copyright-link__img {
+    .copyright__img {
       fill: $footer-aqua-color;
     }
   }
@@ -36,7 +36,7 @@
     padding: 0;
     margin-top: -3px;
 
-    .copyright-link__img {
+    .copyright__img {
       margin-left: 30px;
     }
   }

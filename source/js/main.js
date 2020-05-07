@@ -8,7 +8,7 @@ if ("NodeList" in window && !NodeList.prototype.forEach) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.ymaps) { 
+  if (window.ymaps) {
     ymaps.ready(function () {
       if (document.querySelector(".contacts__map")) {
         var myMap = new ymaps.Map("map", {
@@ -48,12 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var formLink = document.querySelector(".week-product__buy-btn");
   var popup = document.querySelector(".modal");
   var overlay = document.querySelector(".modal__overlay");
-  var productNameInput = document.querySelector(".order-popup__product");
 
   if (formLink) {
     formLink.addEventListener("click", function (evt) {
       evt.preventDefault();
-      productNameInput.value = evt.currentTarget.dataset["product"];
       popup.classList.add("modal--opened");
     });
   }
@@ -79,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
   productBuyBtn.forEach(function(buyBtn) {
     buyBtn.addEventListener("click", function (evt) {
       evt.preventDefault();
-      productNameInput.value = evt.currentTarget.dataset["product"];
       popup.classList.add("modal--opened");
     })
   });
