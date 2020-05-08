@@ -102,6 +102,12 @@
         outline: none;
       }
 
+      &:hover ~ .params-group__item-icon,
+      &:focus ~ .params-group__item-icon {
+        fill: #62d1ba;
+        opacity: 1;
+      }
+
       &::placeholder {
         opacity: 0.3;
       }

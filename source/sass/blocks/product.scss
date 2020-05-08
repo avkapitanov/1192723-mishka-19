@@ -140,11 +140,14 @@
       min-height: 462px;
     }
 
+    .product__price {
+      margin-left: 0;
+    }
 
     .product__info {
       width: 100%;
       flex-grow: 1;
-      min-height: 195px;
+      min-height: 197px;
     }
   }
 }

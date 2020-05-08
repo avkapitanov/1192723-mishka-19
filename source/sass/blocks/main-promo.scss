@@ -76,8 +76,7 @@
       }
     }
 
-    .main-promo__section-links {
-      position: relative;
+    .main-promo__sections {
       width: $tablet-width;
       padding: 0 $tablet-container-padding;
       margin: 0 auto;
@@ -116,7 +115,7 @@
       width: 850px;
     }
 
-    .main-promo__section-links {
+    .main-promo__sections {
       width: $desktop-width;
     }
   }

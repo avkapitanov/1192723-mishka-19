@@ -10,7 +10,9 @@ if ("NodeList" in window && !NodeList.prototype.forEach) {
 document.addEventListener("DOMContentLoaded", function () {
   if (window.ymaps) {
     ymaps.ready(function () {
-      if (document.querySelector(".contacts__map")) {
+      var mapWrapper = document.querySelector(".contacts__map");
+      if (mapWrapper) {
+        mapWrapper.classList.remove('contacts__map--nojs');
         var myMap = new ymaps.Map("map", {
             center: [59.938635, 30.323118],
             zoom: 16,

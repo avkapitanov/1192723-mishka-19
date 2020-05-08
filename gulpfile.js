@@ -29,6 +29,8 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csscomb())
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -142,5 +144,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "compress", "minify"));
+gulp.task("build", gulp.series("clean", "copy", "images", "webp", "css", "sprite", "html", "compress", "minify"));
 gulp.task("start", gulp.series("build", "server"));
