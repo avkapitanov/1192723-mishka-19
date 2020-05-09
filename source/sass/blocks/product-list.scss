@@ -8,6 +8,7 @@
   .product-list {
     .product-list__item {
       margin-bottom: 54px;
+      overflow: hidden;
 
       &:last-child {
         margin-bottom: 0;
