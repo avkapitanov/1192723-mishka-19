@@ -89,9 +89,9 @@
 @media (min-width: $desktop-width) {
   .main-promo {
     &::after {
-      background-size: 1250px;
+      background-size: 1150px;
       height: 34px;
-      bottom: -9px;
+      bottom: -5px;
     }
 
     &--secondary {
